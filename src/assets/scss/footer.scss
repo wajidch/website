@@ -1,0 +1,148 @@
+/* CSS Document */
+
+@import "defualt";
+
+footer{
+    background: url("../img/footer-bg.jpg") top center no-repeat;
+//    min-height: 822px;
+    background-size: cover;
+    padding: 80px 0 20px 0;
+    
+    @include breakpoint(sm) {
+       padding: 40px 0 20px 0;
+    }
+    
+    h2{
+        color: $whitecolor;
+        font-family: $fontsecondary;
+        font-size: 48px;
+        text-align: center;
+        font-weight: 700;
+        @include breakpoint(sm) {
+           font-size: 36px;
+        }
+		  @include breakpoint(tb) {
+           font-size: 36px;
+        }
+    }
+    p{
+        font-size: $pfontsize;
+        color: $whitecolor;
+        text-align: center;
+        padding: 20px 80px;
+        @include breakpoint(sm) {
+           padding: 20px 0px;
+        }
+    }
+    input.subscribe{
+        background: $backgroundwhite;
+        height: 100px;
+        border: $borderradius;
+        padding: 30px;
+        font-size: $h3;
+        font-family: $fontsecondary;
+        font-weight: 600 !important;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        
+        @include breakpoint(sm) {
+           height: 60px;
+            font-size: $h4;
+        }
+        
+    }
+    .btn-subscribe{
+        position: absolute;
+        top: 22px;
+        right: 20px;
+        @include breakpoint(sm) {
+           position: relative;
+            width:100%;
+            right: inherit;
+        }
+    }
+    .footer-links{
+        
+        h4{
+            color: $whitecolor;
+            font-size: $h4;
+            font-weight: 600;
+        }
+        
+        ul{
+            margin: 10px 0 0 0;
+            padding: 0px;
+            display: inline-block;
+            list-style: none;
+            width: 49%;
+            align-items: flex-start;
+            
+            @include breakpoint(sm) {
+                width:100%;
+            }
+            
+            li a{
+                color: $whitecolor;
+                font-size: $btnfontsize;
+                line-height: 36px;
+                font-weight: 400;
+                font-family: $fontprimary;
+                &:hover{
+//                    background:url("../img/dot-footer.png") 0 3px no-repeat;
+                    padding: 0 0 0 5px;
+                }
+            }
+        }
+        
+    }
+    
+    .copyrights{
+        margin-top: 30px !important;
+        
+        @include breakpoint(sm) {
+             margin-top: 0px !important;
+            .mt-5{
+                margin-top: 0px !important;
+            }
+        }
+        
+        p{
+            padding: 0px;
+            text-align: left;
+            font-size: $pfontsize;
+            @include breakpoint(sm) {
+                text-align:center;
+            }
+			 @include breakpoint(tb) {
+                text-align:left!important ;
+            }
+			@include breakpoint(sm) {
+                text-align:center!important ;
+            }
+        }
+        p.social{
+            text-align:right;
+            @include breakpoint(sm) {
+                text-align:center !important;
+            }
+			
+        }
+        a{
+            display: inline-block;
+            padding: 0 3px;
+        }
+        i{
+            background: #10397e;
+            padding: 6px;
+            border-radius: 100px;
+            width: 28px;
+            height: 28px;
+            color: #2073ff;
+            font-size: 16px;
+            align-items: center;
+            text-align: center;
+            &:hover{
+                background:$backgroundwhite;
+            }
+        }
+    }
+}

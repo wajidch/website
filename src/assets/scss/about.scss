@@ -1,0 +1,82 @@
+/* CSS Document */
+@import "defualt";
+@import "header";
+
+header.about-header{
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content:center;
+			
+			@include breakpoint(tb) {
+			padding-top: 100px;
+			height: 100% !important;
+			}
+			
+			@include breakpoint(xs) {
+			padding-top: 100px;
+			height: 100% !important;
+			}
+			
+		h1{
+			font-size: $h1;
+			font-weight: 400;
+			font-family: $fontprimary;
+			span{
+				font-weight: 600;
+			}
+			@include breakpoint(xs) {
+			font-size: $h2;
+			}
+		}
+		
+		p{
+			font-size: $h4;
+			line-height: 36px;
+		}
+	
+	}
+	
+ h2{
+        font-family: $fontprimary;
+        font-size: $h2primary;
+        color: $primarycolor;
+        font-weight: 400;
+        span{
+            font-weight:600;
+        }
+    }
+    p{
+		font-family: $fontprimary;
+        font-size: $pfontsize;
+        color: $primarycolor;
+        line-height: 30px;
+        padding: 10px 0 30px 0px;
+        margin-bottom: 0px;
+    }
+	.boxstyle{
+			border-radius: $borderradius;
+			padding: 35px 30px 35px 30px;
+			background:$backgroundwhite;
+			width:100%;
+			box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+			&:hover{
+				box-shadow: 0px 0px 15px rgba(0,0,0,0.1);				
+			}
+	  }
+	  
+	  .team-bg{
+	  	background:url(../img/testimonial-bg.jpg) top center no-repeat; 
+		background-size:cover;
+	  }
+	  .get-quote-bg{
+	  	padding: 30px 50px;
+		border-radius: 10px;
+		background: linear-gradient(to right, #ff74a1 0%, #6e46a7 100%);
+		
+		@include breakpoint(xs) {
+			padding: 30px 30px;
+			margin: 0px;
+		}
+		
+	  }
