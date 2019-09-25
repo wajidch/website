@@ -11,13 +11,22 @@
                 
                 <div class="subscribe-form">
                     
-                    <form>
+                    <form [formGroup]='emailSubscribe'>
                         
                       <div class="form-group position-relative">
 
-                        <input type="email" class="form-control subscribe" maxlength="30" id="" placeholder="Your email address">
-                        <button type="submit" class="btn btn-subscribe btn-request">Subscribe</button>
-
+                        <input type="email" class="form-control subscribe" name='email' formControlName='email' id="" placeholder="Your email address">
+                        <button type="submit" (click)='subscribe(emailSubscribe.value)' class="btn btn-subscribe btn-request">Subscribe</button>
+                        <div *ngIf="submitted && !emailSubscribe.controls['email'].valid">
+                            <span class="help-block" style="color:red"
+                             *ngIf="submitted && emailSubscribe.controls['email'].hasError('required')">
+                             Email is required.</span>
+                          </div>
+                          <div *ngIf="submitted && !emailSubscribe.controls['email'].valid">
+                            <span class="help-block" style="color:red"
+                             *ngIf="submitted && emailSubscribe.controls['email'].hasError('email')">
+                             Email is not valid.</span>
+                          </div>
                       </div><!--form group-->
                     
                     </form><!--form-->
@@ -28,7 +37,7 @@
             
             <div class="col-md-12 text-center mt-4 mt-4">
                 
-                <a href="#">
+                <a routerLink="">
                     <img src="../../../assets/img/logo-appflox.png" alt=""/> 
                 </a>
                 
@@ -42,31 +51,31 @@
                     
                     <ul>
                         <li>
-                            <a href="#">Home</a>
+                            <a routerLink="">Home</a>
                         </li>
                         <li>
-                            <a href="#">About</a>
+                            <a routerLink="about">About</a>
                         </li>
                         <li>
-                            <a href="#">Services</a>
+                            <a routerLink="#">Services</a>
                         </li>
                         <li>
-                            <a href="#">Work</a>
+                            <a routerLink="#">Work</a>
                         </li>
                     </ul>
                     
                     <ul>
                         <li>
-                            <a href="#">Blog</a>
+                            <a routerLink="#">Blog</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a routerLink="contact">Contact</a>
                         </li>
                         <li>
-                            <a href="#">Privacy Policy</a>
+                            <a routerLink="#">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="#">Terms &amp; Condition</a>
+                            <a routerLink="#">Terms &amp; Condition</a>
                         </li>
                     </ul>
                     
@@ -78,31 +87,31 @@
                     
                     <ul>
                         <li>
-                            <a href="#">Web Development</a>
+                            <a routerLink="webservice">Web Development</a>
                         </li>
                         <li>
-                            <a href="#">Mobile Apps Development</a>
+                            <a routerLink="mobileservice">Mobile Apps Development</a>
                         </li>
                         <li>
-                            <a href="#">Microsoft Technology</a>
+                            <a routerLink="#!">Microsoft Technology</a>
                         </li>
                         <li>
-                            <a href="#">Web &amp; Graphic Desiging</a>
+                            <a routerLink="#!">Web &amp; Graphic Desiging</a>
                         </li>
                     </ul>
                     
                     <ul>
                         <li>
-                            <a href="#">Seo/SMM/Internet Marketing</a>
+                            <a routerLink="#!">Seo/SMM/Internet Marketing</a>
                         </li>
                         <li>
-                            <a href="#">Content Writter</a>
+                            <a routerLink="#!">Content Writter</a>
                         </li>
                         <li class="invisible">
-                            <a href="#">Content</a>
+                            <a routerLink="#">Content</a>
                         </li>
                         <li class="invisible">
-                            <a href="#">Content</a>
+                            <a routerLink="#!">Content</a>
                         </li>
                     </ul>
                     
@@ -122,13 +131,13 @@
                     
                    <p class="social">
                        Follow us:
-                       <a href="#">
+                       <a routerLink="#!">
                            <i class="fab fa-facebook-f"></i>
                        </a>
-                       <a href="#">
+                       <a routerLink="#!">
                            <i class="fab fa-twitter"></i>
                        </a>
-                       <a href="#">
+                       <a routerLink="#!">
                            <i class="fab fa-linkedin-in"></i>
                        </a>
                    </p>

@@ -44,7 +44,9 @@ function hasScrolled() {
    
    // If they scrolled down and are past the navbar, add class .nav-up.
    // This is necessary so you never see what is "behind" the navbar.
+  
    if (st > lastScrollTop && st > navbarHeight){
+       
        // Scroll Down
        $('.navbar').addClass('sticky');
    } else {

@@ -11,7 +11,7 @@
 /*---------Button Styles----------*/
 /*---------box Styles----------*/
 .navbar {
-  padding: .5rem; }
+  padding: 1.3rem 0; }
   @media (max-width: 768px) {
     .navbar .container {
       display: flex !important; }
@@ -257,7 +257,7 @@ header {
     bottom: -30px; }
 
 .subheader {
-  padding-top: 18% !important;
+  padding-top: 10% !important;
   height: inherit !important;
   min-height: 800px; }
   .subheader img {

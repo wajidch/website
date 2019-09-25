@@ -3,7 +3,7 @@
 
 .navbar{
      
-	padding:.5rem;
+	padding:1.3rem 0;
 
 		@include breakpoint(tb){
 	.container{
@@ -341,7 +341,7 @@ header{
 	 
 .subheader{
 	
-		padding-top: 18% !important;
+		padding-top: 10% !important;
 		height: inherit !important;
 		min-height:800px;
 

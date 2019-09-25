@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl:'https://api.trendfxturkiye.com:446/'
+  apiUrl:'http://localhost/appflox/'
 };
 
 /*

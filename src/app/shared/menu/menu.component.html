@@ -1,27 +1,27 @@
 <ngx-loading-bar></ngx-loading-bar>
 <header> 
-  <nav class="navbar navbar-expand-lg navbar-dark" id="navbar"> 
+  <nav class="navbar navbar-expand-lg navbar-dark" id="navbar" (scroll)="onWindowScroll($event);"> 
       <div class="container">
           <div class="row w-100 m-0">
               
                   <div class="col-lg-2 col-sm-12">
-                  <a class="navbar-brand" routerLink="home"></a>
+                  <a class="navbar-brand" routerLink=""></a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
                   </div><!--.colmd2-->
                   <div class="col-lg-10  d-flex">
                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
               <li class="nav-item ">
-                  <a class="nav-link active" routerLink="home">Home</a> 
+                  <a class="nav-link active" id='home' (click)='home()' routerLink="home">Home</a> 
               </li>
               <li class="nav-item"> 
-                  <a class="nav-link" routerLink="about">About us</a> 
+                  <a class="nav-link" id='about' (click)='about()' routerLink="about">About us</a> 
               </li>
               <li class="nav-item"> 
-                  <a class="nav-link" href="#!">Services</a>
+                  <a class="nav-link" id='service' (click)='service()' href="#!">Services</a>
                   <ul>
                       <li>
-                          <a routerLink="webservice">Web Development</a>
+                          <a  routerLink="webservice">Web Development</a>
                       </li>
                       <li>
                           <a routerLink="mobileservice">Mobile Application</a>
@@ -35,13 +35,13 @@
                   </ul>
               </li>
               <li class="nav-item"> 
-                  <a class="nav-link" >Work</a> 
+                  <a class="nav-link" id='work' (click)='work()' routerLink='#!'>Work</a> 
               </li>
               <li class="nav-item"> 
-                  <a class="nav-link" >Blog</a> 
+                  <a class="nav-link" id='blog' (click)='blog()' routerLink='#!'>Blog</a> 
               </li>
               <li class="nav-item"> 
-                  <a class="nav-link" routerLink="contact">Contact</a> 
+                  <a class="nav-link" id='contact' (click)='contact()' routerLink="contact">Contact</a> 
               </li>
               
           </ul>
@@ -143,29 +143,54 @@ One App at a time.</h2>
     </div>
     <div class="modal-body">
       
-        <form>
+        <form [formGroup]='QuoteForm'>
   <div class="form-group">
   <label for="exampleFormControlInput1">Name</label>
-  <input type="text" class="form-control" id="" placeholder="Full Name">
+  <input type="text" name='Fullname' formControlName='Fullname' class="form-control" id="" placeholder="Full Name">
+  <div *ngIf="submitted && !QuoteForm.controls['Fullname'].valid">
+    <span class="help-block" style="color:red"
+     *ngIf="submitted && QuoteForm.controls['Fullname'].hasError('required')">
+     Name is required.</span>
+  </div>
   </div>
   <div class="form-group">
   <label for="exampleFormControlInput1">Email address</label>
-  <input type="email" class="form-control" id="" placeholder="name@example.com">
+  <input type="email" name='email' formControlName='email' class="form-control" id="" placeholder="name@example.com">
+  <div *ngIf="submitted && !QuoteForm.controls['email'].valid">
+    <span class="help-block" style="color:red"
+     *ngIf="submitted && QuoteForm.controls['email'].hasError('required')">
+     Email is required.</span>
+  </div>
+  <div *ngIf="submitted && !QuoteForm.controls['email'].valid">
+    <span class="help-block" style="color:red"
+     *ngIf="submitted && QuoteForm.controls['email'].hasError('email')">
+     Email is not valid.</span>
+  </div>
   </div>
   <div class="form-group">
   <label for="exampleFormControlInput1">Phone</label>
-  <input type="number" class="form-control" id="" placeholder="Phone Number">
+  <input type="text" name='phone' formControlName='phone' class="form-control" id="" placeholder="Phone Number">
+  <div *ngIf="submitted && !QuoteForm.controls['phone'].valid">
+    <span class="help-block" style="color:red"
+     *ngIf="submitted && QuoteForm.controls['phone'].hasError('required')">
+     Phone is required.</span>
+  </div>
   </div>
   
   <div class="form-group">
   <label for="exampleFormControlTextarea1">Message</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <textarea class="form-control" name='message' formControlName='message' id="exampleFormControlTextarea1" rows="3"></textarea>
+  <div *ngIf="submitted && !QuoteForm.controls['message'].valid">
+    <span class="help-block" style="color:red"
+     *ngIf="submitted && QuoteForm.controls['message'].hasError('required')">
+     Message is required.</span>
   </div>
+</div>
   </form>
         
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-request">Send Request</button>
+      <button type="button" (click)='sendRequest(QuoteForm.value)' class="btn btn-request">Send Request</button>
     </div>
   </div>
   </div>
