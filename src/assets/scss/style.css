@@ -44,6 +44,8 @@
         width: 164px !important;
         height: 38px !important; } }
 
+
+
 .navbar-nav {
   width: 100%;
   justify-content: flex-end; }
@@ -138,7 +140,7 @@ a.get-quote {
   left: 0;
   padding: 1% 0;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  z-index: 10; }
+  z-index: 20 !important; }
   .navbar.sticky li a.nav-link {
     color: #525252 !important; }
     .navbar.sticky li a.nav-link .navbar-toggler {
