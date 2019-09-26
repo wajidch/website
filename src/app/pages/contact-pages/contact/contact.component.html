@@ -1,3 +1,5 @@
+<ngx-loading-bar></ngx-loading-bar>
+
 <header class="contact-header" style="background: url(../../../assets/img/map.jpg) no-repeat !important;">
 	
 </header>
@@ -23,10 +25,10 @@ laboris nisi ut aliquip ex ea commodo consequat. </p>
 						<form [formGroup]='contactForm'>
                           <div class="form-row">
                             <div class="form-group col-md-6">
-                              <input type="text" name='name' formControlName='name' class="form-control" id="" placeholder="Fullname">
-                              <div *ngIf="submitted && !contactForm.controls['name'].valid">
+                              <input type="text" name='Fullname' formControlName='Fullname' class="form-control" id="" placeholder="Full Name">
+                              <div *ngIf="submitted && !contactForm.controls['Fullname'].valid">
                                 <span class="help-block" style="color:red"
-                                 *ngIf="submitted && contactForm.controls['name'].hasError('required')">
+                                 *ngIf="submitted && contactForm.controls['Fullname'].hasError('required')">
                                  Name is required.</span>
                               </div>
                             </div>
@@ -72,7 +74,8 @@ laboris nisi ut aliquip ex ea commodo consequat. </p>
                           </div>
                           
                           
-                          <button type="submit" (click)='contactUs(contactForm.value)' class="btn btn-request">Submit</button>
+                          <button type="submit" (click)='contactUs(contactForm.value)'
+                          buttonLoader [loaderColor]="'white'" class="btn btn-request"><span></span>Submit</button>
                         </form><!--form-->
                     
                     </div><!--colmd8-->
@@ -132,3 +135,4 @@ laboris nisi ut aliquip ex ea commodo consequat. </p>
     </section>
     
 <!--Contact section-->
+

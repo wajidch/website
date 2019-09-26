@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { LoadingBarService } from '@ngx-loading-bar/core';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-footer',
@@ -38,12 +39,21 @@ export class FooterComponent implements OnInit {
       this.submitted=false;
     
     this.loadingBar.start();
-    this.apiservice.get(`subscribers.php?email=${val.email}`)
+    this.apiservice.post('subscribe',val)
       .pipe(
         catchError(err => {
           console.log('Handling error locally and rethrowing it...', err);
+          this.loadingBar.complete();
 
           //this.spinner.hide();
+            //this.spinner.hide();
+            Swal.fire({
+              title: 'Oops,Email already subscribed!',
+        
+              type: 'error',
+           
+            
+            })
           this.loadingBar.complete();
         
           return throwError(err);
@@ -55,7 +65,13 @@ export class FooterComponent implements OnInit {
 
           if (res.status === 200) {
             this.loadingBar.complete();
-
+            Swal.fire({
+              title: 'Great,Now you will recevie our latest update',
+        
+              type: 'success',
+           
+            
+            })
             //this.spinner.hide();
            
           }

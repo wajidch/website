@@ -20,6 +20,7 @@ import { InnerMenuComponent } from './shared/inner-menu/inner-menu.component';
 import { WebServicePageComponent } from './pages/service-pages/web-service-page/web-service-page.component';
 import { MobileServicePageComponent } from './pages/service-pages/mobile-service-page/mobile-service-page.component';
 import { ContactComponent } from './pages/contact-pages/contact/contact.component';
+import { AngularButtonLoaderModule } from 'angular-button-loader';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { ContactComponent } from './pages/contact-pages/contact/contact.componen
     FormsModule,
     HttpClientModule,
     NgxSpinnerModule,
-    LoadingBarModule
+    LoadingBarModule,
+    AngularButtonLoaderModule.forRoot()
     
   ],
   providers: [apiService,

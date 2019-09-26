@@ -6,6 +6,9 @@ import { LoadingBarService } from '@ngx-loading-bar/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
+import Swal from 'sweetalert2'
+import { AngularButtonLoaderService } from 'angular-button-loader';
+
 
 @Component({
   selector: 'app-contact',
@@ -20,11 +23,12 @@ export class ContactComponent implements OnInit {
   constructor(private apiservice:apiService,
     private spinner:NgxSpinnerService,
     private router:Router,
-    private loadingBar:LoadingBarService,) { }
+    private loadingBar:LoadingBarService,
+    private loaderbutton:AngularButtonLoaderService) { }
 
   ngOnInit() {
     this.contactForm= new FormGroup({
-      name:new FormControl('', [Validators.required]),
+      Fullname:new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required,
       Validators.email]),
       phone: new FormControl('', [Validators.required]),
@@ -35,32 +39,43 @@ export class ContactComponent implements OnInit {
     })
   }
   contactUs(val){
-    this.loadingBar.start();
     this.submitted=true;
     //this.spinner.show();
     if(this.contactForm.valid){
-
+      this.loadingBar.start();
+      this.loaderbutton.displayLoader();
+     
       this.submitted=false;
     
     this.loadingBar.start();
-    this.apiservice.post('sendrequest', val)
+    this.apiservice.post('contactUs', val)
       .pipe(
         catchError(err => {
           console.log('Handling error locally and rethrowing it...', err);
 
           //this.spinner.hide();
           this.loadingBar.complete();
-        
+        this.loaderbutton.hideLoader();
           return throwError(err);
         })
       )
       .subscribe(
         (res: any) => {
-          if (res.status === 200) {
-            this.loadingBar.complete();
+          this.loadingBar.complete();
 
+          this.loaderbutton.hideLoader();
+
+          if (res.status === 200) {
+            Swal.fire({
+              title: 'Thank you we will contact you soon!',
+        
+              type: 'success',
+            
+            })
             //this.spinner.hide();
             this.loadingBar.complete();
+
+            this.loaderbutton.hideLoader();
            
           }
 

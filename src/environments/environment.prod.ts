@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl:'http://localhost/appflox/'
+  apiUrl:'http://76840e36.ngrok.io/api/'
 };

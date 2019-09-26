@@ -9,6 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 declare var jquery: any;
 declare var $: any;
 import { DOCUMENT } from '@angular/common';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -52,15 +53,15 @@ QuoteForm: FormGroup;
      }
   }
   sendRequest(val){
-    this.loadingBar.start();
     this.submitted=true;
     //this.spinner.show();
     if(this.QuoteForm.valid){
+      this.loadingBar.start();
 
       this.submitted=false;
     
     this.loadingBar.start();
-    this.apiservice.post('requestQuote.php', val)
+    this.apiservice.post('quote', val)
       .pipe(
         catchError(err => {
           console.log('Handling error locally and rethrowing it...', err);
@@ -73,12 +74,19 @@ QuoteForm: FormGroup;
       )
       .subscribe(
         (res: any) => {
-          if (res.status === 200) {
-            this.loadingBar.complete();
+          this.loadingBar.complete();
 
+            this.loadingBar.complete();
+            Swal.fire({
+              title: 'Thank you we will contact you soon!',
+        
+              type: 'success',
+           
+            
+            })
             //this.spinner.hide();
            
-          }
+          
 
         })
 

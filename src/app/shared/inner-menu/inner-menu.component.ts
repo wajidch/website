@@ -9,6 +9,7 @@ import { throwError } from 'rxjs';
 declare var jquery: any;
 declare var $: any;
 import { DOCUMENT } from '@angular/common';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-inner-menu',
@@ -27,7 +28,7 @@ export class InnerMenuComponent implements OnInit {
 
   ngOnInit() {
     this.QuoteForm= new FormGroup({
-      name:new FormControl('', [Validators.required]),
+      Fullname:new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required,
       Validators.email]),
       phone: new FormControl('', [Validators.required]),
@@ -47,21 +48,22 @@ export class InnerMenuComponent implements OnInit {
      }
   }
   sendRequest(val){
-    this.loadingBar.start();
 
     this.submitted=true;
     //this.spinner.show();
     if(this.QuoteForm.valid){
+      this.loadingBar.start();
 
       this.submitted=false;
     
     this.loadingBar.start();
-    this.apiservice.post('sendrequest', val)
+    this.apiservice.post('quote', val)
       .pipe(
         catchError(err => {
           console.log('Handling error locally and rethrowing it...', err);
+          this.loadingBar.complete();
 
-          //this.spinner.hide();
+        
           this.loadingBar.complete();
         
           return throwError(err);
@@ -69,12 +71,20 @@ export class InnerMenuComponent implements OnInit {
       )
       .subscribe(
         (res: any) => {
-          if (res.status === 200) {
+          this.loadingBar.complete();
+
+   
 
             this.loadingBar.complete();
             //this.spinner.hide();
+            Swal.fire({
+              title: 'Thank you we will contact you soon!',
+        
+              type: 'success',
            
-          }
+            
+            })
+          
 
         })
 
