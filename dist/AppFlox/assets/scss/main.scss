@@ -1,0 +1,661 @@
+/* CSS Document */
+@import "defualt";
+@import "header";
+
+/* Service section*/
+.service-bg{
+    background:url("../img/service-bg.jpg") top center no-repeat;
+    background-size: cover;
+    min-height: 595px;
+    padding: 85px 0;
+    z-index: 1;
+    
+    h2{
+        font-family: $fontprimary;
+        font-size: $h2primary;
+        color: $primarycolor;
+        font-weight: 400;
+        span{
+            font-weight:600;
+            display: block;
+        }
+		    @include breakpoint(tb) {
+                font-size: 25px !important;
+                
+              }
+    }
+    p{
+        font-size: $pfontsize;
+        color: $primarycolor;
+        line-height: 30px;
+        padding: 10px 0 30px 0px;
+        margin-bottom: 0px;
+    }
+    
+    .service-box{
+        border-radius: $borderradius;
+        padding: 35px 30px 20px 30px;
+        min-height:380px;
+        background:$backgroundwhite;
+        width:100%;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+        display: inline-block;
+        .round-icon{
+            width:108px;
+            height: 108px;
+            background: $lightsky;
+            border-radius:100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width:73px;
+                height: 76px;
+            }
+        }
+        h3{
+            font-size: $h3;
+            color: $primarycolor;
+            font-weight: 600;
+            margin-top:25px;
+        }
+        p{
+            font-size: $navfont;
+            font-weight: 500;
+            color: $primarycolor;
+        }
+    }
+    
+    
+}
+.owl-carousel .owl-stage-outer{
+        padding:20px;
+        
+        .owl-item{
+               width:350px !important;
+             margin-right: 30px !important;
+            
+			@include breakpoint(md) {
+            width: 291px !important;
+               margin-right: 28px !important;
+        }
+		
+			@include breakpoint(tb) {
+            width: 330px;
+               margin-right: 28px !important;
+        }
+		
+            @include breakpoint(sm) {
+            width: 290px;
+               margin-right: 28px !important;
+        }
+		@include breakpoint(xs) {
+			width: 346px;
+               margin-right: 28px !important;
+		}
+        
+    }
+        }
+    .owl-theme .owl-nav {
+    margin-top: 10px;
+    display: none !important;
+}
+    .owl-theme .owl-dots, .owl-theme .owl-nav {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    position: absolute;
+    top: -10px;
+    right: 0px;
+        @include breakpoint(sm) {
+            bottom: -20px;
+            top: inherit;
+            right: inherit;
+            left: inherit;
+            position: relative;
+        }
+}
+    .owl-theme .owl-dots .owl-dot span {
+    width: 18px;
+    height: 9px;
+    margin: 5px 5px;
+    background: #dfdfe9;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 100px;
+        outline: none !important;
+}
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    width: 30px;
+    background: #3286ff;
+}
+    
+/* Welcome section*/
+.welcome-section{
+    padding:100px 0;
+    
+    @include breakpoint(sm) {
+        padding:40px 0px;
+        
+    }
+    
+    h2{
+        font-size: $h2primary;
+        color: $primarycolor;
+        font-family: $fontprimary;
+        span{
+            font-weight:700;
+            display: block;
+        }
+		    @include breakpoint(tb) {
+             font-size: 25px!important;
+        }
+    }
+    
+    p{
+        font-size: $pfontsize;
+        color: $primarycolor;
+        line-height: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    img{
+        width:100%;
+        margin: 0px 0 0 0;
+         @include breakpoint(sm) {
+              margin: 50px 0 0 0;
+        }
+    }
+    
+}
+
+/* Work section*/
+.work-section{
+    background:url("../img/work-bg.jpg") top center no-repeat;
+    background-size:cover;
+    min-height: 683px;
+    padding: 80px 0px;
+    @include breakpoint(sm) {
+         padding-top:40px;
+
+  }
+    
+    h2{
+        text-align: center;
+        color: $whitecolor;
+        font-family: $fontprimary;
+        font-size: $h2primary;
+		    @include breakpoint(tb) {
+             font-size: 25px!important;
+        }
+        
+        span{
+            font-weight: 600;
+            display: block;
+        }
+    }
+    .project-slider{
+        padding-top: 100px;
+        
+        @include breakpoint(sm) {
+         padding-top:30px;
+
+  }
+        
+        .carousel-indicators{
+            bottom:-50px !important;
+            li {
+    position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 18px !important;
+    height: 9px !important;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    background-color: rgba(255,255,255,.5);
+    border-radius: 100px !important;
+                
+}
+        }
+        .carousel-indicators .active {
+    background-color: #ff75a1;
+            width:30px !important;
+}
+    }
+    .project-slider{
+    .carousel-item{
+        img{
+            width:100%;
+        }
+    }
+        }
+    h3{
+        font-size:48px;
+        color: $whitecolor;
+        font-family: $fontprimary;
+        font-weight: 700;
+        text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    }
+    
+    p{
+        font-size: $pfontsize;
+        color: $whitecolor;
+        line-height: 30px;
+    }
+    ul{
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+        width: 49%;
+        list-style: none;
+        
+        @include breakpoint(sm) {
+            width: 100%;
+        }
+        
+        li{
+            background:url("../img/dot-icon.png") 0px 15px no-repeat;
+            padding: 0 0 0 25px;
+            line-height: 40px;
+            color: $whitecolor;
+            font-weight: 500;
+        }
+        
+    }
+}
+
+
+/* Testimonial section*/
+.testimonial-section{
+    background: url("../img/testimonial-bg.jpg") top center no-repeat;
+    padding: 100px 0px;
+    min-height: 794px;
+    background-size: cover;
+    @include breakpoint(sm) {
+         padding-top:40px;
+
+  }
+    .carousel-indicators{
+            top:-80px !important;
+        right:-52px !important;
+        position: absolute !important;
+        left: inherit !important;
+        margin: 0px !important;
+        
+        @include breakpoint(sm) {
+            right:-22px !important;
+            top:-60px !important;
+        }
+        
+            li {
+    position: relative;
+    width: 18px !important;
+    height: 9px !important;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    background-color: #dfdfe9;
+    border-radius: 100px !important;
+                
+}
+        }
+        .carousel-indicators .active {
+    background-color: #ff75a1;
+            width:30px !important;
+}
+    
+    h2{
+        text-align:center;
+        color: $primarycolor;
+        font-size: $h2primary;
+        font-family: $fontprimary;
+		    @include breakpoint(tb) {
+             font-size: 25px!important;
+        }
+        
+        span{
+            font-weight: 600;
+            display: block;
+        }
+    }
+    .testimonial-bg{
+        position: relative;
+        margin: 50px auto 0;
+        
+        
+        &:before{
+            position: absolute;
+            content: '';
+            left: -18px;
+            top: 0;
+            background: url("../img/testimonial-border-bg.png") no-repeat;
+            width: 387px;
+            height: 474px;
+            
+                 @include breakpoint(sm) {
+                     width: 100%;
+                     background-size: contain;
+                     left: 0;
+
+                  }
+            }
+        }
+    .testimonial-box{
+        background: url("../img/quote-icon.jpg") bottom left #FFF no-repeat; 
+        padding: 50px 50px 0px;
+        box-shadow: 1px 1px 15px rgba(0,0,0,0.2);
+        min-height: 406px;
+        position: relative;
+        z-index: 1;
+        margin: 35px 0;
+        
+        @include breakpoint(sm) {
+            margin: 13px 0;
+            padding: 20px 20px 0px;
+
+          }
+        
+        
+        p{
+            font-size: $h3;
+            color: $primarycolor;
+            line-height: 40px;
+            font-weight: 600;
+            font-family: $fontprimary;
+            @include breakpoint(sm) {
+            line-height: 30px;
+                font-size: 18px;
+          }
+        }
+        
+        h4{
+            font-size: $h4;
+            color: $bluecolor;
+            float: right;
+            text-align: right;
+            line-height: 24px;
+            font-family: $fontsecondary;
+            font-weight: 700;
+            margin-top: 30px;
+            
+            @include breakpoint(sm) {
+                margin-top: 0px;
+            }
+            
+            span{
+                display: block;
+                color: #9d9d9d;
+                font-size: $btnfontsize;
+                font-weight: 400;
+            }
+        }
+        
+        .client-img{
+            background:url("../img/testimonial-pic-bg.png") no-repeat;
+            width: 286px;
+            height: 318px;
+            float: right;
+            display: flex;
+            align-items: center;
+            
+            @include breakpoint(sm) {
+             width: 256px;
+             height: 258px;
+             background-size: contain;
+                margin: 20px 0px;
+          }
+            
+        }
+        img{
+            height: 269px;
+            @include breakpoint(sm) {
+               height: 220px; 
+            }
+        }
+    }
+}
+
+/* Quote section*/
+.quote-section{
+    padding:80px 0;
+    background: $lightbggrediant;
+    
+    @include breakpoint(sm) {
+        padding:40px 0px;
+    }
+    
+    h2{
+        font-size: $h2primary;
+        color: $primarycolor;
+        font-family: $fontprimary;
+		    @include breakpoint(tb) {
+             font-size: 25px!important;
+        }
+        span{
+            font-weight:700;
+        }
+    }
+    
+    p{
+        font-size: $pfontsize;
+        color: $primarycolor;
+        line-height: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    img{
+        width:100%;
+        margin: -50px 0 0 0;
+        
+        @include breakpoint(sm) {
+        margin: 0px 0 0 0;
+    }
+        
+    }
+    
+}
+
+/* Work section*/
+.how-works-section{
+    background:url("../img/how-it-works-bg.jpg") top center no-repeat;
+    background-size:cover;
+    min-height: 679px;
+    padding: 80px 0px;
+	
+    @include breakpoint(sm) {
+         padding-top:40px;
+
+  }
+  .boxstyle-blue{
+			border-radius: $borderradius;
+			min-height:380px;
+			background:#5eaaff;
+			width:100%;
+			box-shadow: 0px 5px 10px rgba(0,0,0,0.0);
+			display: inline-block;
+			position:relative;
+			z-index:1;
+			margin-top:45px !important;
+			
+	  }
+	  .boxstyle{
+			border-radius: $borderradius;
+			padding: 35px 30px 35px 30px;
+			min-height:380px;
+			background:$backgroundwhite;
+			width:100%;
+			box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+			display: inline-block;
+			position:relative;
+			z-index:2;
+			margin-top:-8px;
+			
+	  }
+    
+    h2{
+        font-size: $h2primary;
+        color: $primarycolor;
+        font-family: $fontprimary;
+		font-weight:700;
+		text-align:center;
+    }
+	
+    h3{
+        color: #f7f7f7;
+        font-family: $fontsecondary;
+        font-size: 64px;
+		font-weight:700;
+    }
+	h4{
+        font-size:24px;
+        color: $primarycolor;
+        font-family: $fontsecondary;
+        text-shadow: none;
+    }
+    
+    p{
+        font-size: $pfontsize;
+        color: $primarycolor;
+        line-height: 30px;
+    }
+    .btn-request{
+		background:$secondarybtncolor;
+		font-size:14px;
+		&:hover{
+		background: $primarybtncolor;
+		}
+	}
+}
+.bg-white{
+	background:$backgroundwhite !important;
+}
+
+/* Services section*/
+.feature-section{
+    background:url("../img/circle-bg.jpg") top right no-repeat;
+    background-size:contain;
+    min-height: 1104px;
+    padding: 80px 0px;
+	margin-top:-76px;
+	
+    @include breakpoint(sm) {
+         padding-top:40px;
+  }
+   @include breakpoint(xs) {
+         .col-md-6.offset-1{
+		 	margin:0px;
+		 }
+  }
+  
+  	h4{
+	 font-family: $fontprimary;
+	 font-weight: 600;
+	}
+	p{
+	 margin-top: 15px;
+	 padding:0px;
+	}
+	.boxstyle{
+		min-height: 296px;
+		width: 100%;
+		border-radius: 10px;
+		padding: 20px;
+		background: $backgroundwhite;
+		box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+		text-align:center;
+		.icon-app{
+			margin:10px 0px 20px;
+			img{
+				width:auto !important;
+			}
+		}
+	}
+  .applogos{
+  	margin:50px 0px;
+	
+	ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	display:flex;
+	justify-content:center;
+	
+	@include breakpoint(xs) {
+			
+			display:block;
+			
+		}
+	
+	li{
+		width:152px;
+		height:152px;
+		border-radius: $borderradius;
+		box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+		background: $backgroundwhite;
+		display:inline-flex;
+		align-items:center;
+		justify-content:center;
+		margin: 20px 15px;
+		
+		@include breakpoint(xs) {
+			
+			width:100%;
+			height:152px;
+			margin: 0px 0px 20px;
+			display:flex;
+			
+		}
+		
+		img{
+			width: auto !important;
+			@include breakpoint(xs) {
+			margin:0px;
+			}
+		}
+	}
+	
+	}
+  }
+}
+
+.client-section{
+	
+	.boxstyle{
+		min-height: 296px;
+		width: 100%;
+		border-radius: 10px;
+		padding: 20px;
+		background: $backgroundwhite;
+		box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+		text-align:center;
+		
+		h4{
+			font-size:36px;
+			color:#196aff;
+			font-weight: 700;
+			margin-top:20px;
+			margin-bottom:0px;
+		}
+		p{
+			font-size: $h4 !important;
+			font-family: $fontprimary !important;
+		}
+		.app-icon{
+			margin:20px 0px !important;
+			img{
+				width:auto !important;
+			}
+		}
+	}
+	
+}
+
+p.font24{ 
+	font-size:$h3;
+	line-height:36px;
+}
+
+
+

@@ -1,0 +1,418 @@
+/* CSS Document */
+@import "defualt";
+
+.navbar{
+     
+	padding:1.3rem 0;
+
+		@include breakpoint(tb){
+	.container{
+			display: flex !important;
+	
+		.col-sm-12{	
+		display: flex!important;
+		justify-content: space-between!important;
+			}
+	}
+	.navbar-toggler {
+    color: rgb(255, 160, 129);
+    border-color: rgba(255,255,255,.1);
+    background: #398efe !important;
+	
+}
+	}
+
+		@include breakpoint(sm) {
+	.col-lg-2{
+		display: flex!important;
+		width: 100%!important;
+		justify-content: space-between!important;
+	}
+	.navbar-toggler {
+    color: rgb(255, 160, 129);
+    border-color: rgba(255,255,255,.1);
+    background: #398efe !important;
+	
+}
+	
+  }
+        .navbar-brand{
+            margin-right: .5rem;
+            background: url("../img/logo-appflox.png") no-repeat;
+            height: 48px;
+            width: 207px;
+		
+				@include breakpoint(lg) {
+					background-size:contain!important;
+				    width: 164px !important;
+                    height: 38px !important;
+			}
+        
+			
+        }
+    }
+	.navbar-nav{
+		width:100%;
+        justify-content: flex-end;
+        
+        li {
+            position: relative;
+            list-style: none;
+			
+            &:hover ul{
+                display: block;
+            }
+			
+            ul{
+                position: absolute;
+                list-style: none;
+                background: #FFF;
+                border-radius: $borderradius;
+                min-width: 200px;
+                z-index: 1;
+                padding: 10px 0px;
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+                top: 30px;
+                left: 0px;
+                display: none;
+                
+                a{
+                    padding:10px 15px;
+                    display: block;
+                    color: $primarycolor;
+                    &:hover{
+                        background:$bluecolor;
+                        color: $whitecolor;
+                    }
+                }
+                
+            }
+        }
+        a.nav-link{
+			color:#FFF;
+			font-family: 'Quicksand', sans-serif;
+            font-size: $navfont;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 0 25px !important;
+            position: relative;
+			
+			@include breakpoint(md){
+				padding: 0 20px!important;
+			}
+				
+			@include breakpoint(lg){
+				padding: 0 18px!important;
+			}
+          @include breakpoint(sm) {
+            .col-md-2{
+              display: flex;
+              width: 100%;
+              justify-content: space-between;
+            }
+            .navbar-toggler {
+              color: rgb(255, 160, 129);
+              border-color: rgba(255,255,255,.1);
+              background: #398efe !important;
+
+            }
+
+          }
+            &:after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 3px;
+                background: $primarybtncolor;
+                transition: width .3s;
+            }
+            &:hover::after {
+                width: 100%;
+                //transition: width .3s;
+            }
+			
+		}
+		
+	}
+	
+	a.active{
+			
+			&:after{
+				content: '';
+				display: block;
+				width: 100% !important;
+				height: 3px;
+				background: $primarybtncolor;
+				transition: width .3s;
+				}
+			
+		}
+		
+    a.get-quote{
+            background:$primarybtncolor;
+            min-width: 146px;
+            height: 45px;
+            text-align: center;
+            border-radius: 3px;
+            line-height: 45px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            color: $whitecolor;
+            font-weight: 600;
+            display: inline-block;
+        &:hover{
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+            background: $primarybtncolorhover;
+        }
+        }
+	.logo{
+		height:48px;
+	}
+	.navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #FFF;
+    left: 0;
+    padding: 1% 0;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+        z-index: 10;
+        li a.nav-link{
+            color:#525252 !important;
+				.navbar-toggler {
+    color: rgb(255, 160, 129);
+    border-color: rgba(255,255,255,.1);
+    background: #398efe !important;
+	
+}
+        }
+    
+        .navbar-brand{
+            margin-right: .5rem;
+            background: url("../img/logo-appflox-blue.png") no-repeat ;
+            height: 48px;
+            width: 207px;
+            background-size:cover;
+				@include breakpoint(lg) {
+					background-size:contain!important;
+				    width: 164px !important;
+                    height: 38px!important;
+			}
+        
+        }
+   
+    }
+	
+	.custom-nav{
+		background:$backgroundwhite;
+		padding:1.3rem 0px;
+		box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+		
+		.navbar-brand{
+            margin-right: .5rem;
+            background: url("../img/logo-appflox-blue.png") no-repeat ;
+            height: 48px;
+            width: 207px;
+            background-size:cover;
+        
+				@include breakpoint(lg) {
+					background-size:contain!important;
+				    width: 164px !important;
+                    height: 38px !important;
+			}
+        
+        }
+	}
+	
+header{
+	height:100vh;
+	background: url("../img/header-bg.jpg") no-repeat;
+	width:100%;
+	background-size:cover;
+    
+    @include breakpoint(sm) {
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+	
+	.col-md-2{
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+	.navbar-toggler {
+    color: rgb(255, 160, 129);
+    border-color: rgba(255,255,255,.1);
+    background: #398efe !important;
+	
+}
+	
+  }
+     @include breakpoint(lg) {
+         .slider-content{
+             padding-top:5%;
+         }
+  }
+    @include breakpoint(sm) {
+         .slider-content{
+             padding-top:10%;
+         }
+  }
+    
+    
+    .slider-content{
+        
+        .align-center{
+             display: flex;
+            align-items: center;
+            height: 100%;
+            img{
+                float: right;
+                width: 100%;
+                text-align: right;
+            }
+        }
+        
+        h1{
+            font-size:$h1;
+            color: $whitecolor;
+            font-weight: 600;
+            text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+            line-height: 66px;
+            
+                @include breakpoint(md) {
+                font-size: 36px !important;
+                line-height: normal !important;
+              }
+			      @include breakpoint(tb) {
+                font-size: 36px !important;
+                line-height: normal !important;
+              }
+			 @include breakpoint(sm) {
+                font-size: 26px;
+                line-height: normal;
+              }
+        }
+        h2{
+            font-size:$h2;
+            color: $whitecolor;
+            font-weight: 400;
+            margin: 30px 0;
+            
+                @include breakpoint(sm) {
+                font-size: 18px;
+                line-height: normal;
+                margin: 15px 0;
+              }
+			    @include breakpoint(tb) {
+                font-size: 20px !important;
+              
+              }
+            
+        }
+        .btn-request{
+            min-width:197px;
+            height: 55px;
+            background:$primarybtncolor;
+            font-size:$navfont;
+            color: $whitecolor;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 38px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             &:hover{
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+            background: $primarybtncolorhover;
+                
+        }
+            @include breakpoint(sm) {
+                    min-width: 175px !important;
+                    height: 48px !important;
+                    font-size: 14px !important;
+                    line-height: 34px !important;
+              }
+        }
+    }
+    .carousel-indicators{
+        bottom:-30px;
+    }
+
+}
+
+	 
+.subheader{
+	
+		padding-top: 10% !important;
+		height: inherit !important;
+		min-height:800px;
+
+		
+		
+		img{
+			float:none !important;
+			margin:0px !important;
+			width: inherit !important;
+		}
+		
+		
+		h1{
+            font-size:70px;
+            color: $whitecolor;
+            font-weight: 400 !important;
+            text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+            line-height: normal;
+			font-family: $fontprimary;
+            span{
+			font-weight: 600;
+			display:block
+			}
+                @include breakpoint(sm) {
+                font-size: 26px;
+                line-height: normal;
+              }
+        }
+		
+		p{
+			font-size: $font30;
+			color: $whitecolor;
+			line-height: 48px;
+			font-weight: 400 !important;
+			margin:20px 0px;
+		}
+		
+	}
+
+
+	
+.subheader-service{
+		background:url(../img/web-service-bg.jpg) no-repeat !important;
+		padding-top: 130px !important;
+		height: inherit !important;
+		min-height:800px;
+		@include breakpoint(xs) {
+			background:url(../img/web-service-bg.jpg) center center no-repeat !important;
+		}
+		
+		p{
+		 font-size: $h3;
+		 margin:0px !important;
+		}
+}
+.header-mobile{
+		background: url(../img/services-header-bg.jpg) top center no-repeat !important;
+		
+		@include breakpoint(xs) {
+			background: url(../img/services-header-bg.jpg) center center no-repeat !important;
+            padding: 100px 10px 50px; 
+			height: 100% !important;
+			min-height: inherit !important;
+         }
+		
+		p {
+    font-size: 18px;
+    color: #ffffff !important;
+    line-height: 36px;
+    font-weight: 400 !important;
+    margin: 20px 0px;
+}
+	}
+
