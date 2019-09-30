@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl:'http://cd6d991b.ngrok.io/api/'
+  apiUrl:'http://157.245.40.90:8080/api/'
 };
 
 /*
