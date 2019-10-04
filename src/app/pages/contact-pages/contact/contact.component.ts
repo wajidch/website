@@ -8,7 +8,8 @@ import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import Swal from 'sweetalert2'
 import { AngularButtonLoaderService } from 'angular-button-loader';
-
+declare var jquery: any;
+declare var $: any;
 
 @Component({
   selector: 'app-contact',
@@ -64,7 +65,7 @@ export class ContactComponent implements OnInit {
           this.loadingBar.complete();
 
           this.loaderbutton.hideLoader();
-
+          $("#contactform").trigger("reset");
           if (res.status === 200) {
             Swal.fire({
               title: 'Thank you we will contact you soon!',

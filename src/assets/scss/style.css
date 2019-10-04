@@ -1081,18 +1081,18 @@ header {
       display: flex;
       justify-content: center; }
       @media (max-width: 375px) {
-        .feature-section .applogos ul {
+         .feature-section .applogos ul {
           display: block; } }
-      .feature-section .applogos ul li {
-        width: 152px;
-        height: 152px;
+      .feature-section .applogos .owl-item {
+        width: 152px !important;
+        height: 152px !important;
         border-radius: 5px;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
         background: #FFF;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        margin: 20px 15px; }
+        margin: 20px 8px; }
         @media (max-width: 375px) {
           .feature-section .applogos ul li {
             width: 100%;

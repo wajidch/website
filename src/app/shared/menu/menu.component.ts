@@ -77,6 +77,8 @@ QuoteForm: FormGroup;
           this.loadingBar.complete();
 
             this.loadingBar.complete();
+            $("#quoteform").trigger("reset");
+
             Swal.fire({
               title: 'Thank you we will contact you soon!',
         

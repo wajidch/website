@@ -7,7 +7,8 @@ import { LoadingBarService } from '@ngx-loading-bar/core';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import Swal from 'sweetalert2';
-
+declare var jquery: any;
+declare var $: any;
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -65,6 +66,8 @@ export class FooterComponent implements OnInit {
 
           if (res.status === 200) {
             this.loadingBar.complete();
+        // $("#email").val('')
+        $("#subscribeform").trigger("reset");
             Swal.fire({
               title: 'Great,Now you will recevie our latest update',
         

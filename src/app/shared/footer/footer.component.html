@@ -11,11 +11,12 @@
                 
                 <div class="subscribe-form">
                     
-                    <form [formGroup]='emailSubscribe'>
+                    <form [formGroup]='emailSubscribe' id='subscribeform'>
                         
                       <div class="form-group position-relative">
 
-                        <input type="email" class="form-control subscribe" name='email' formControlName='email' id="" placeholder="Your email address">
+                        <input type="email" class="form-control subscribe" name='email' formControlName='email'
+                         id="emailAddress" placeholder="Your email address">
                         <button type="submit" (click)='subscribe(emailSubscribe.value)' class="btn btn-subscribe btn-request">Subscribe</button>
                         <div *ngIf="submitted && !emailSubscribe.controls['email'].valid">
                             <span class="help-block" style="color:red"

@@ -10,7 +10,8 @@ import { throwError } from 'rxjs';
 import Swal from 'sweetalert2';
 import { AngularButtonLoaderService } from 'angular-button-loader';
 
-
+declare var jquery: any;
+declare var $: any;
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -67,6 +68,7 @@ export class AboutComponent implements OnInit {
 
             this.loadingBar.complete();
             this.loaderbutton.hideLoader();
+             $("#aboutquoteform").trigger("reset");
 
             Swal.fire({
               title: 'Thank you we will contact you soon!',
