@@ -21,6 +21,9 @@ import { WebServicePageComponent } from './pages/service-pages/web-service-page/
 import { MobileServicePageComponent } from './pages/service-pages/mobile-service-page/mobile-service-page.component';
 import { ContactComponent } from './pages/contact-pages/contact/contact.component';
 import { AngularButtonLoaderModule } from 'angular-button-loader';
+import { SeoServiceComponent } from './pages/service-pages/seo-service/seo-service.component';
+import { UxuiServiceComponent } from './pages/service-pages/uxui-service/uxui-service.component';
+import { ContentServiceComponent } from './pages/service-pages/content-service/content-service.component';
 
 
 @NgModule({
@@ -34,7 +37,10 @@ import { AngularButtonLoaderModule } from 'angular-button-loader';
     InnerMenuComponent,
     WebServicePageComponent,
     MobileServicePageComponent,
-    ContactComponent
+    ContactComponent,
+    SeoServiceComponent,
+    UxuiServiceComponent,
+    ContentServiceComponent
   
   
     

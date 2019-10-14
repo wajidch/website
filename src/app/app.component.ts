@@ -37,7 +37,8 @@ export class AppComponent implements OnInit {
             
         }
         else if(route.url==='/about' ||route.url==='/blog'
-         ||route.url==='/webservice'||route.url==='/mobileservice' ||route.url==='/contact'   ){
+         ||route.url==='/webservice'||route.url==='/mobileservice' 
+         ||route.url==='/seoservice' || route.url==='/contentservice' || route.url==='/uxuiservice'  ||route.url==='/contact'   ){
           
           this.showMainheader=false;
           this.showInnerHeader=true;

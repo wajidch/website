@@ -316,7 +316,9 @@ header.about-header {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  background: url(../img/service-bg.jpg) top center no-repeat;
+  background-size: cover !important; }
   @media (max-width: 768px) {
     header.about-header {
       padding-top: 100px;

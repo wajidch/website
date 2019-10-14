@@ -6,6 +6,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact-pages/contact/contact.component';
+import { SeoServiceComponent } from './pages/service-pages/seo-service/seo-service.component';
+import { UxuiServiceComponent } from './pages/service-pages/uxui-service/uxui-service.component';
+import { ContentServiceComponent } from './pages/service-pages/content-service/content-service.component';
 
 const routes: Routes = [
 
@@ -15,6 +18,9 @@ const routes: Routes = [
       { path:'webservice',component:WebServicePageComponent},
       { path:'mobileservice',component:MobileServicePageComponent},
       { path:'contact',component:ContactComponent},
+      { path:'seoservice',component:SeoServiceComponent},
+      { path:'uxuiservice',component:UxuiServiceComponent},
+      { path:'contentservice',component:ContentServiceComponent},
       {path:'**',redirectTo:'',pathMatch:'full'}
       
 ];

@@ -44,8 +44,6 @@
         width: 164px !important;
         height: 38px !important; } }
 
-
-
 .navbar-nav {
   width: 100%;
   justify-content: flex-end; }
@@ -140,7 +138,7 @@ a.get-quote {
   left: 0;
   padding: 1% 0;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  z-index: 20 !important; }
+  z-index: 10; }
   .navbar.sticky li a.nav-link {
     color: #525252 !important; }
     .navbar.sticky li a.nav-link .navbar-toggler {
@@ -1081,18 +1079,18 @@ header {
       display: flex;
       justify-content: center; }
       @media (max-width: 375px) {
-         .feature-section .applogos ul {
+        .feature-section .applogos ul {
           display: block; } }
-      .feature-section .applogos .owl-item {
-        width: 152px !important;
-        height: 152px !important;
+      .feature-section .applogos ul li {
+        width: 152px;
+        height: 152px;
         border-radius: 5px;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
         background: #FFF;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        margin: 20px 8px; }
+        margin: 20px 15px; }
         @media (max-width: 375px) {
           .feature-section .applogos ul li {
             width: 100%;
@@ -1130,6 +1128,69 @@ header {
 p.font24 {
   font-size: 24px;
   line-height: 36px; }
+
+/* SEO client section */
+.happy-clients {
+  background: #4ca2ff;
+  background: -webkit-linear-gradient(left, #4ca2ff 0%, #0d5eff 100%);
+  background: -o-linear-gradient(left, #4ca2ff 0%, #0d5eff 100%);
+  background: linear-gradient(to right, #4ca2ff 0%, #0d5eff 100%);
+  padding: 4em 0 8em; }
+  .happy-clients h4 {
+    font-size: 36px;
+    color: #ffffff !important;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 0px; }
+  .happy-clients p {
+    font-size: 18px !important;
+    font-family: "Raleway", sans-serif !important;
+    color: #ffffff !important; }
+
+.custom-tabs {
+  border: 0px;
+  min-height: 120px;
+  margin: 30px 0px; }
+  .custom-tabs li.nav-item {
+    border-right: #FFF solid 3px;
+    width: 25%;
+    min-height: 120px; }
+    .custom-tabs li.nav-item a.nav-link {
+      border: 0px;
+      background: none;
+      line-height: 46px;
+      width: 100%;
+      height: 100%;
+      border-radius: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f9f8fe;
+      color: #515151; }
+      .custom-tabs li.nav-item a.nav-link:after {
+        display: none; }
+    .custom-tabs li.nav-item a.nav-link.active {
+      background: linear-gradient(to right, #ffa280 0%, #ff74a1 100%);
+      color: #ffffff !important; }
+
+.tab-content p {
+  margin: 0px !important;
+  padding: 0px !important; }
+.tab-content ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none; }
+  .tab-content ul li {
+    line-height: 30px;
+    margin: 10px 0 0 0;
+    background: url("../img/checked.png") 0 7px no-repeat;
+    padding-left: 30px; }
+
+.work-process {
+  margin: 0px;
+  min-height: inherit !important;
+  background: url("../img/testimonial-bg.jpg") top center no-repeat;
+  background-size: cover; }
 
 /* CSS Document */
 /* CSS Document */
@@ -1567,7 +1628,9 @@ header.about-header {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  background: url(../img/service-bg.jpg) top center no-repeat;
+  background-size: cover !important; }
   @media (max-width: 768px) {
     header.about-header {
       padding-top: 100px;
