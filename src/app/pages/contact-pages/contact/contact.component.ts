@@ -40,6 +40,8 @@ export class ContactComponent implements OnInit {
     })
   }
   contactUs(val){
+    $("#contactRequest").css("cursor", 'not-allowed');
+    $("#contactRequest").attr("disabled", true);
     this.submitted=true;
     //this.spinner.show();
     if(this.contactForm.valid){
@@ -74,6 +76,8 @@ export class ContactComponent implements OnInit {
             
             })
             //this.spinner.hide();
+            $("#contactRequest").css("cursor", 'pointer');
+            $("#contactRequest").attr("disabled", false);
             this.loadingBar.complete();
 
             this.loaderbutton.hideLoader();

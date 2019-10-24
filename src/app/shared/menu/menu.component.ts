@@ -55,6 +55,8 @@ QuoteForm: FormGroup;
      }
   }
   sendRequest(val){
+    $("#sendRequest").css("cursor", 'not-allowed');
+    $("#sendRequest").attr("disabled", true);
     this.submitted=true;
     //this.spinner.show();
     if(this.QuoteForm.valid){
@@ -80,6 +82,7 @@ QuoteForm: FormGroup;
 
             this.loadingBar.complete();
 
+           
             $("#quoteform").trigger("reset");
 
             Swal.fire({
@@ -89,6 +92,9 @@ QuoteForm: FormGroup;
            
             
             })
+            
+            $("#sendRequest").css("cursor", 'pointer');
+            $("#sendRequest").attr("disabled", false);;
 
             $(".close").click();
             //this.spinner.hide();

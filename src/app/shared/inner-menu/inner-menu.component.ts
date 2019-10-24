@@ -48,7 +48,8 @@ export class InnerMenuComponent implements OnInit {
      }
   }
   sendRequest(val){
-
+    $("#sendRequest").css("cursor", 'not-allowed');
+    $("#sendRequest").attr("disabled", true);
     this.submitted=true;
     //this.spinner.show();
     if(this.QuoteForm.valid){
@@ -84,6 +85,8 @@ export class InnerMenuComponent implements OnInit {
            
             
             })
+            $("#sendRequest").css("cursor", 'pointer');
+            $("#sendRequest").attr("disabled", false);
             $(".close").click();
 
         })

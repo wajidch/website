@@ -40,11 +40,13 @@ export class AboutComponent implements OnInit {
   
   }
   sendRequest(val){
+    $("#sendRequest").css("cursor", 'not-allowed');
+    $("#sendRequest").attr("disabled", true);
     this.submitted=true;
     //this.spinner.show();
     if(this.QuoteForm.valid){
       this.loadingBar.start();
-      this.loaderbutton.displayLoader();
+      
 
       this.submitted=false;
     
@@ -67,7 +69,7 @@ export class AboutComponent implements OnInit {
           this.loadingBar.complete();
 
             this.loadingBar.complete();
-            this.loaderbutton.hideLoader();
+       
              $("#aboutquoteform").trigger("reset");
 
             Swal.fire({
@@ -78,6 +80,8 @@ export class AboutComponent implements OnInit {
             
             })
             //this.spinner.hide();
+            $("#sendRequest").css("cursor", 'pointer');
+            $("#sendRequest").attr("disabled", false);
             $(".close").click();
           
 
