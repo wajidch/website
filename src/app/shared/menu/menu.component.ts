@@ -6,6 +6,7 @@ import { LoadingBarService } from '@ngx-loading-bar/core';
 import { throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 declare var jquery: any;
 declare var $: any;
 import { DOCUMENT } from '@angular/common';
@@ -25,6 +26,7 @@ QuoteForm: FormGroup;
     private spinner:NgxSpinnerService,
     private router:Router,
     private loadingBar:LoadingBarService,
+    private titleService: Title,
     @Inject(DOCUMENT) document
     ) { }
 

@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router'
-import { catchError } from 'rxjs/operators';
+import { Router, NavigationEnd ,ActivatedRoute} from '@angular/router'
+import { catchError,filter, map } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { apiService } from './services/api.service';
 import { LoadingBarService } from '@ngx-loading-bar/core';
 import { authService } from './services/auth.service';
+import { Title } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -22,11 +24,28 @@ export class AppComponent implements OnInit {
   constructor( public router: Router,
     private apiservice:apiService,
     private loadingBar:LoadingBarService,
-    private authenticationService: authService) {
+    private authenticationService: authService,
+    private titleService:Title,
+    private activatedRoute:ActivatedRoute) {
       
      }
 
   ngOnInit() {
+    const appTitle = this.titleService.getTitle();
+    this.router
+      .events.pipe(
+        filter(event => event instanceof NavigationEnd),
+        map(() => {
+          const child = this.activatedRoute.firstChild;
+          if (child.snapshot.data['title']) {
+            return child.snapshot.data['title'];
+          }
+          return appTitle;
+        })
+      ).subscribe((ttl: string) => {
+        this.titleService.setTitle(ttl);
+      });
+  
     this.router.events.subscribe((route)=>{
       if(route instanceof NavigationEnd){
         

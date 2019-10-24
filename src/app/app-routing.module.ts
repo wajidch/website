@@ -12,16 +12,16 @@ import { ContentServiceComponent } from './pages/service-pages/content-service/c
 
 const routes: Routes = [
 
-      { path:'',component:HomeComponent},
-      { path:'about',component:AboutComponent},
-      { path:'blog',component:BlogComponent},
-      { path:'webservice',component:WebServicePageComponent},
-      { path:'mobileservice',component:MobileServicePageComponent},
-      { path:'contact',component:ContactComponent},
-      { path:'seoservice',component:SeoServiceComponent},
-      { path:'uxuiservice',component:UxuiServiceComponent},
-      { path:'contentservice',component:ContentServiceComponent},
-      {path:'**',redirectTo:'',pathMatch:'full'}
+      { path:'',component:HomeComponent,data: {title: 'Appflox | Home'}},
+      { path:'about',component:AboutComponent,data: {title: 'Appflox | About Us'}},
+      { path:'blog',component:BlogComponent,data: {title: 'Appflox | Blog'}},
+      { path:'webservice',component:WebServicePageComponent,data: {title: 'Appflox | Web Development'}},
+      { path:'mobileservice',component:MobileServicePageComponent,data: {title: 'Appflox | Mobile Development'}},
+      { path:'contact',component:ContactComponent,data: {title: 'Appflox | Contact Us'}},
+      { path:'seoservice',component:SeoServiceComponent,data: {title: 'Appflox | SEO'}},
+      { path:'uxuiservice',component:UxuiServiceComponent,data: {title: 'Appflox | UXUI'}},
+      { path:'contentservice',component:ContentServiceComponent,data: {title: 'Appflox | Content Writing'}},
+      {path:'**',redirectTo:'',pathMatch:'full',data: {title: 'Appflox | Home'}}
       
 ];
 
