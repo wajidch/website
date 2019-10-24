@@ -84,7 +84,7 @@ export class InnerMenuComponent implements OnInit {
            
             
             })
-          
+            $(".close").click();
 
         })
 

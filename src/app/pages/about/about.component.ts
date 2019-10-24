@@ -78,7 +78,7 @@ export class AboutComponent implements OnInit {
             
             })
             //this.spinner.hide();
-           
+            $(".close").click();
           
 
         })

@@ -79,6 +79,7 @@ QuoteForm: FormGroup;
           this.loadingBar.complete();
 
             this.loadingBar.complete();
+
             $("#quoteform").trigger("reset");
 
             Swal.fire({
@@ -88,6 +89,8 @@ QuoteForm: FormGroup;
            
             
             })
+
+            $(".close").click();
             //this.spinner.hide();
            
           

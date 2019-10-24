@@ -12,6 +12,11 @@
 /*---------Color Styles----------*/
 /*---------Button Styles----------*/
 /*---------box Styles----------*/
+.loading-bar-fixed > div#loading-bar-spinner {
+  position: fixed;
+  top: -57px !important;
+  left: 10px;
+}
 .navbar {
   padding: 1.3rem 0; }
   @media (max-width: 768px) {
