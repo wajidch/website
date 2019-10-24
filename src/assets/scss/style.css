@@ -813,7 +813,7 @@ header {
       background-color: #ff75a1;
       width: 30px !important; }
   .work-section .project-slider .carousel-item img {
-    width: 100%; }
+    width: 60%; }
   .work-section h3 {
     font-size: 48px;
     color: #ffffff !important;
@@ -839,6 +839,25 @@ header {
       line-height: 40px;
       color: #ffffff !important;
       font-weight: 500; }
+
+      .carousel-fade .carousel-inner .item {
+        transition-property: opacity;
+      }
+      .carousel-fade .carousel-inner .item, .carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right {
+        opacity: 0;
+      }
+      .carousel-fade .carousel-inner .active, .carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right {
+        opacity: 1;
+      }
+      .carousel-fade .carousel-inner .next, .carousel-fade .carousel-inner .prev, .carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right {
+        left: 0;
+        transform: translate3d(0, 0, 0);
+      }
+      .carousel-fade .carousel-control {
+        z-index: 2;
+      }
+      
+
 
 /* Testimonial section*/
 .testimonial-section {
