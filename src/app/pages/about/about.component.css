@@ -1,6 +1,7 @@
 .boxstyle img {
     height: 100px;
-}
+    object-fit: cover;
+    }
 .capital-text{
     text-transform: capitalize;
   }
