@@ -1,0 +1,103 @@
+/* CSS Document */
+
+/*---------fonts Styles----------*/
+$fontprimary:'Raleway', sans-serif;
+$fontsecondary:'Quicksand', sans-serif;
+$navfont:16px;
+$btnfontsize:14px;
+$h1:60px;
+$h2:30px;
+$h2primary:36px;
+$pfontsize:16px;
+$h3:24px;
+$h4:18px;
+$font30: 30px;
+
+/*---------Color Styles----------*/
+$whitecolor:#ffffff !important;
+$primarycolor:#515151;
+$lightsky:#edf6fd;
+$backgroundwhite:#FFF;
+$bluecolor:#0d5eff;
+
+/*---------Button Styles----------*/
+$primarybtncolor:linear-gradient(to right,  #ff74a1 0%,#ffa280 100%);
+$primarybtncolorhover:linear-gradient(to right,  #ffa280 0%,#ff74a1 100%);
+$secondarybtncolor:linear-gradient(to right,  #4ba1ff 0%,#0e5fff 100%);
+
+$lightbggrediant:linear-gradient(to bottom,  #feffff 0%,#f6f9ff 100%);
+
+
+$fonts: Arial, "Hiragino Kaku Gothic Pro W3", Meiryo, sans-serif;
+$bg_color: #2d3042;
+$font_color: #efefef;
+$link_color: #efefef;
+$link_hover_color: #fff;
+
+
+/*---------box Styles----------*/
+$borderradius: 5px;
+
+
+@mixin mobile{
+    @media (max-width: 767px){
+        @content
+    }
+}
+
+//@mixin breakpoints{
+//    $sm:"( max-width:  767px )";
+//    $md:"( min-width:  992px )";
+//    $lg:"( min-width:  1200px )";
+//}
+
+@mixin breakpoint($point) {
+  @if $point == lg {
+    @media (max-width: 1440px) { @content; }
+  }
+  @else if $point == md {
+    @media (max-width: 1024px) { @content; }
+  }
+
+  @else if $point == tb {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $point == sm {
+    @media (max-width: 600px)  { @content; }
+  }
+	@else if $point == landscap-xs {
+    @media (max-width: 479px)  { @content; }
+  }
+  @else if $point == xs {
+    @media (max-width: 375px)  { @content; }
+  }
+	@else if $point == custom-xs {
+    @media (max-width: 320px)  { @content; }
+  }
+}
+
+//$breakpoints: (
+//  'small':  ( min-width:  767px ),
+//  'medium': ( min-width:  992px ),
+//  'large':  ( min-width: 1200px )
+//) !default;
+//
+///// Mixin to manage responsive breakpoints
+///// @author Hugo Giraudel
+///// @param {String} $breakpoint - Breakpoint name
+///// @require $breakpoints
+//@mixin respond-to($breakpoint) {
+//  // If the key exists in the map
+//  @if map-has-key($breakpoints, $breakpoint) {
+//    // Prints a media query based on the value
+//    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+//      @content;
+//    }
+//  }
+// 
+//  // If the key doesn't exist in the map
+//  @else {
+//    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+//        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+//  }
+//}

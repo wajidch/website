@@ -19,7 +19,7 @@
                     <div class="col-md-8">
                     	
                         <h2>Leave <span class="d-inline-block">Message</span></h2>
-                        <p class="capital-text">Appflox needs the contact information you provide to follow up with you about your inquiry.
+                        <p>Appflox needs the contact information you provide to follow up with you about your inquiry.
                            By clicking submit below, you consent to allow us to store and process the personal 
                            information submitted below.
                           </p>
@@ -73,6 +73,38 @@
                                *ngIf="submitted && contactForm.controls['message'].hasError('required')">
                                Message is required.</span>
                             </div>
+                          </div>
+                          <div class="form-group">
+                              <!-- <div>
+                                  <ul class="alt">
+                                      <li>
+                                          <span>Loaded: </span>
+                                          <i *ngIf="!captchaIsLoaded" class="fas fa-times text-danger"></i>
+                                          <i *ngIf="captchaIsLoaded" class="fas fa-check text-success"></i>
+                                      </li>
+                                      <li>
+                                          <span>Captcha ready: </span>
+                                          <i *ngIf="!captchaIsReady" class="fas fa-times text-danger"></i>
+                                          <i *ngIf="captchaIsReady" class="fas fa-check text-success"></i>
+                                      </li>
+                                      <li>
+                                          <span>Captcha success: </span>
+                                          <i *ngIf="!captchaSuccess" class="fas fa-times text-danger"></i>
+                                          <i *ngIf="captchaSuccess" class="fas fa-check text-success"></i>
+                                      </li>
+                                  </ul>
+                              </div> -->
+                            <ngx-invisible-recaptcha #captchaElem
+                              [siteKey]="siteKey"
+                              (reset)="handleReset()"
+                              (ready)="handleReady()"
+                              (load)="handleLoad()"
+                              (success)="handleSuccess($event)"
+                              [useGlobalDomain]="false"
+                           
+                              [ngModel]="recaptcha"
+                              [ngModelOptions]="{ standalone: true }">
+                            </ngx-invisible-recaptcha>
                           </div>
                           
                           

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { apiService } from 'src/app/services/api.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Router } from '@angular/router';
@@ -8,6 +8,8 @@ import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import Swal from 'sweetalert2'
 import { AngularButtonLoaderService } from 'angular-button-loader';
+import { environment } from 'src/environments/environment';
+import { InvisibleReCaptchaComponent } from 'ngx-captcha';
 declare var jquery: any;
 declare var $: any;
 
@@ -19,13 +21,20 @@ declare var $: any;
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   submitted: boolean;
-
+  public captchaIsLoaded = false;
+  public captchaSuccess = false;
+  public captchaResponse?: string;
+  public captchaIsReady = false;
+  public recaptcha: any = null;
+  @ViewChild('captchaElem', { static: false }) captchaElem: InvisibleReCaptchaComponent;
+siteKey=environment.siteKey;
 
   constructor(private apiservice:apiService,
     private spinner:NgxSpinnerService,
     private router:Router,
     private loadingBar:LoadingBarService,
-    private loaderbutton:AngularButtonLoaderService) { }
+    private loaderbutton:AngularButtonLoaderService,
+    private cdr: ChangeDetectorRef,) { }
 
   ngOnInit() {
     this.contactForm= new FormGroup({
@@ -36,8 +45,38 @@ export class ContactComponent implements OnInit {
       subject: new FormControl('', [Validators.required]),
 
       message: new FormControl('', [Validators.required]),
+      recaptcha: new FormControl([this.recaptcha, Validators.required])
 
     })
+  }
+  
+  execute(): void {
+    console.log("captaha",this.recaptcha)
+    this.captchaElem.execute();
+ 
+  }
+
+  handleReset(): void {
+    this.captchaSuccess = false;
+    this.captchaResponse = undefined;
+    this.cdr.detectChanges();
+  }
+
+  handleSuccess(captchaResponse: string): void {
+    
+    this.captchaSuccess = true;
+    this.captchaResponse = captchaResponse;
+    this.cdr.detectChanges();
+  }
+
+  handleLoad(): void {
+    this.captchaIsLoaded = true;
+    this.cdr.detectChanges();
+  }
+
+  handleReady(): void {
+    this.captchaIsReady = true;
+    this.cdr.detectChanges();
   }
   contactUs(val){
     $("#contactRequest").css("cursor", 'not-allowed');

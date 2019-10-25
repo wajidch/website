@@ -24,7 +24,7 @@ import { AngularButtonLoaderModule } from 'angular-button-loader';
 import { SeoServiceComponent } from './pages/service-pages/seo-service/seo-service.component';
 import { UxuiServiceComponent } from './pages/service-pages/uxui-service/uxui-service.component';
 import { ContentServiceComponent } from './pages/service-pages/content-service/content-service.component';
-
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 @NgModule({
   declarations: [
@@ -55,7 +55,8 @@ import { ContentServiceComponent } from './pages/service-pages/content-service/c
     HttpClientModule,
     NgxSpinnerModule,
     LoadingBarModule,
-    AngularButtonLoaderModule.forRoot()
+    AngularButtonLoaderModule.forRoot(),
+    NgxCaptchaModule
     
   ],
   providers: [apiService,

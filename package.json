@@ -21,6 +21,8 @@
     "@angular/router": "~8.2.0",
     "@ngx-loading-bar/core": "^4.2.0",
     "angular-button-loader": "^1.1.5",
+    "ng-recaptchav3": "^4.0.2",
+    "ngx-captcha": "^7.0.0",
     "ngx-spinner": "^8.0.3",
     "rxjs": "~6.4.0",
     "sweetalert2": "^8.17.4",
