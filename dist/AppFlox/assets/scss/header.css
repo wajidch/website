@@ -49,8 +49,8 @@
       list-style: none;
       background: #FFF;
       border-radius: 5px;
-      min-width: 200px;
-      z-index: 1;
+      min-width: 250px;
+      z-index: 10;
       padding: 10px 0px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
       top: 30px;
@@ -121,7 +121,7 @@ a.get-quote {
 
 .logo {
   height: 48px; }
-  
+
 .navbar.sticky {
   position: fixed;
   top: 0;
