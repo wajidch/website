@@ -55,7 +55,7 @@
       list-style: none;
       background: #FFF;
       border-radius: 5px;
-      min-width: 200px;
+      min-width: 250px;
       z-index: 1;
       padding: 10px 0px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
@@ -136,7 +136,7 @@ a.get-quote {
   left: 0;
   padding: 1% 0;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  z-index: 10; }
+  z-index: 16 !important; }
   .navbar.sticky li a.nav-link {
     color: #525252 !important; }
     .navbar.sticky li a.nav-link .navbar-toggler {

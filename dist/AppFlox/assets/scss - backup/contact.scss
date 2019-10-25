@@ -1,0 +1,79 @@
+/* CSS Document */
+@import "defualt";
+@import "header";
+
+.contact-header{
+	min-height:500px !important;
+	height: auto !important;
+}
+.contact-section{
+	background: url(../img/contact-bg.jpg) top center no-repeat;
+	min-height: 770px;
+	padding:0px !important;
+	
+	.boxstyle{
+		width: 100%;
+		border-radius: 10px;
+		padding: 30px;
+		background: $backgroundwhite;
+		box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+		margin-top: -90px;
+		p{
+			margin: 20px 0px;
+			line-height:30px;
+			font-size: $pfontsize;
+		}
+		h2{
+		font-family: $fontprimary;
+			
+		span{
+			font-weight:700;
+		}
+		
+			}
+			.custom-h2{
+				@include breakpoint(sm){
+				padding-top: 40px!important;
+			}
+	}
+	}
+	input.form-control{
+		height:54px;
+		border: solid 2px #efeffa;
+		margin-bottom: 10px;
+	}
+	textarea.form-control{
+		height:100px;
+		border: solid 2px #efeffa;
+		margin-bottom: 20px;
+	}
+	.location{
+		ul{
+			list-style:none;
+			padding:0px;
+			margin:0px 0 50px 0;
+			
+			li{
+				line-height: normal;
+				margin-top: 20px;
+				position:relative;
+				padding:0 0 0 30px;
+				a{
+					color: $primarycolor;
+					&:hover{
+						color: $bluecolor;
+					}
+				}
+				
+				i{
+				color:#b2b2b2;
+				font-size: 18px;
+				position:absolute;
+				left:0;
+				top:2px;
+				}
+			}
+			
+		}
+	}
+}

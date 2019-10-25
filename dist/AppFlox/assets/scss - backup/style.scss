@@ -1,0 +1,48 @@
+/* CSS Document */
+
+/* Import Css */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700|Raleway:400,500,600,700&display=swap');
+
+
+@import "defualt";
+@import "header";
+@import "main";
+@import "footer";
+@import "about";
+@import "contact";
+
+
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Raleway', sans-serif;
+	font-family: 'Quicksand', sans-serif;
+	
+	*{transition:all 0.3s ease-in-out;}
+}
+a{
+    text-decoration:none !important;
+    hover{
+        text-decoration:none !important;
+    }
+}
+
+.btn-request{
+            min-width:197px;
+            height: 55px;
+            background:$primarybtncolor;
+            font-size:$navfont;
+            color: $whitecolor;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 38px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             &:hover{
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+            background: $primarybtncolorhover;
+            color: $whitecolor;
+        }
+     @include breakpoint(sm) {
+               width:100%;
+                }
+    }
