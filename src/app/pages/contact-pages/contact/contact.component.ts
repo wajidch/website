@@ -79,11 +79,12 @@ siteKey=environment.siteKey;
     this.cdr.detectChanges();
   }
   contactUs(val){
-    $("#contactRequest").css("cursor", 'not-allowed');
-    $("#contactRequest").attr("disabled", true);
+    
     this.submitted=true;
     //this.spinner.show();
     if(this.contactForm.valid){
+      $("#contactRequest").css("cursor", 'not-allowed');
+    $("#contactRequest").attr("disabled", true);
       this.loadingBar.start();
       this.loaderbutton.displayLoader();
      

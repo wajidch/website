@@ -40,11 +40,13 @@ export class AboutComponent implements OnInit {
   
   }
   sendRequest(val){
-    $("#sendRequest").css("cursor", 'not-allowed');
-    $("#sendRequest").attr("disabled", true);
+    
+    
     this.submitted=true;
     //this.spinner.show();
     if(this.QuoteForm.valid){
+      $("#sendRequest").css("cursor", 'not-allowed');
+      $("#sendRequest").attr("disabled", true);
       this.loadingBar.start();
       
 

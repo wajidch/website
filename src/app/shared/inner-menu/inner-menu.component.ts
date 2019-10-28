@@ -89,12 +89,14 @@ siteKey=environment.siteKey;
      }
   }
   sendRequest(val){
-    $("#sendRequest").css("cursor", 'not-allowed');
-    $("#sendRequest").attr("disabled", true);
+    
+    
     this.captchaElem.execute();
     this.submitted=true;
     //this.spinner.show();
     if(this.QuoteForm.valid){
+      $("#sendRequest").css("cursor", 'not-allowed');
+      $("#sendRequest").attr("disabled", true);
       this.loadingBar.start();
 
       this.submitted=false;
