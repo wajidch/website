@@ -21,8 +21,8 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              {"glob": "sitemap.xml", "input": "src/assets", "output": "/"}
+              "src/sitemap.xml",
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
