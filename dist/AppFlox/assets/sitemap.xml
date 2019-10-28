@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+
+<url>
+  <loc>https://www.appflox.com/</loc>
+  <lastmod>2019-10-28T05:19:09+00:00</lastmod>
+</url>
+<url>
+  <loc>https://www.appflox.com/about</loc>
+  <lastmod>2019-10-28T05:19:09+00:00</lastmod>
+</url>
+<url>
+  <loc>https://www.appflox.com/uxuiservice</loc>
+  <lastmod>2019-10-28T05:19:09+00:00</lastmod>
+</url>
+<url>
+  <loc>https://www.appflox.com/webservice</loc>
+  <lastmod>2019-10-28T05:19:09+00:00</lastmod>
+</url>
+<url>
+  <loc>https://www.appflox.com/mobileservice</loc>
+  <lastmod>2019-10-28T05:19:09+00:00</lastmod>
+</url>
+<url>
+  <loc>https://www.appflox.com/seoservice</loc>
+  <lastmod>2019-10-28T05:19:09+00:00</lastmod>
+</url>
+<url>
+  <loc>https://www.appflox.com/contentservice</loc>
+  <lastmod>2019-10-28T05:19:09+00:00</lastmod>
+</url>
+<url>
+  <loc>https://www.appflox.com/contact</loc>
+  <lastmod>2019-10-28T05:19:09+00:00</lastmod>
+</url>
+</urlset>
