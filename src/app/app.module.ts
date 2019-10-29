@@ -40,7 +40,7 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     ContactComponent,
     SeoServiceComponent,
     UxuiServiceComponent,
-    ContentServiceComponent
+    ContentServiceComponent,
   
   
     

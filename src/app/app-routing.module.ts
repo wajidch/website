@@ -10,6 +10,7 @@ import { SeoServiceComponent } from './pages/service-pages/seo-service/seo-servi
 import { UxuiServiceComponent } from './pages/service-pages/uxui-service/uxui-service.component';
 import { ContentServiceComponent } from './pages/service-pages/content-service/content-service.component';
 
+
 const routes: Routes = [
 
       { path:'',component:HomeComponent,data: {title: 'Home | Appflox'}},
@@ -21,7 +22,7 @@ const routes: Routes = [
       { path:'seoservice',component:SeoServiceComponent,data: {title: 'SEO | Appflox'}},
       { path:'uxuiservice',component:UxuiServiceComponent,data: {title: 'UI/UX | Appflox'}},
       { path:'contentservice',component:ContentServiceComponent,data: {title: 'Content Writing | Appflox'}},
-      { path:'sitemapxml',component:ContentServiceComponent,data: {title: 'Content Writing | Appflox'}},
+  
       {path:'**',redirectTo:'',pathMatch:'full',data: {title: 'Home | Appflox'}}
       
 ];

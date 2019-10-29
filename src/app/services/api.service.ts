@@ -39,6 +39,10 @@ export class apiService implements OnInit {
 
 
     }
+    getXML(){
+        const headers = new HttpHeaders({ 'Content-Type': 'text/xml' }).set('Accept', 'text/xml');
+        this.http.get('getxmlurl', { headers: headers }).subscribe(response => { return response; });
+    }
 
     post(url: string, body) {
         const headers = new HttpHeaders()
