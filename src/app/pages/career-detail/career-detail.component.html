@@ -158,33 +158,65 @@
 					<div class="job-detail rounded border p-4 mb-4">
 						<div class="contact-section form-job" style="background: none;">
 							<h5 class="text-dark mb-2">Apply for Job</h5>
-                       		<form>
+                       		<form [formGroup]='jobForm'>
                           <div class="form-row">
                             <div class="form-group col-md-12 mb-1">
-                              <input type="text" class="form-control" id="" name="fullname" placeholder="Fullname">
+                              <input type="text" class="form-control" id=""  name="fullname"
+                              formControlName='fullname'
+                               placeholder="Full Name" required='required'>
+                               <div *ngIf="submitted && !jobForm.controls['fullname'].valid">
+                                <span class="help-block" style="color:red"
+                                 *ngIf="submitted && jobForm.controls['fullname'].hasError('required')">
+                                 Full Name is required.</span>
+                              </div>
                             </div>
                             <div class="form-group col-md-12 mb-1">
-                              <input type="email" class="form-control" id="" name="email" placeholder="Email">
+                              <input type="email" class="form-control" id="" required name="email"
+                              formControlName='email' placeholder="Email">
+                              <div *ngIf="submitted && !jobForm.controls['email'].valid">
+                                <span class="help-block" style="color:red"
+                                 *ngIf="submitted && jobForm.controls['email'].hasError('required')">
+                                 email is required.</span>
+                              </div>
                             </div>
                           </div>
                           <div class="form-row">
                             <div class="form-group col-md-12 mb-1">
-                              <input type="text" class="form-control" id="" name="phone" placeholder="Phone">
+                              <input type="text" class="form-control" id="" required name="phone"
+                              formControlName='phone' placeholder="Phone">
+                              <div *ngIf="submitted && !jobForm.controls['phone'].valid">
+                                <span class="help-block" style="color:red"
+                                 *ngIf="submitted && jobForm.controls['phone'].hasError('required')">
+                                 phone is required.</span>
+                              </div>
                             </div>
                             <div class="form-group col-md-12 mb-1">
-                              <input type="text" class="form-control" id="" name="subject" placeholder="Subject">
+                              <input type="text" class="form-control" id="" required name="subject"
+                              formControlName='subject' placeholder="Subject">
+                              <div *ngIf="submitted && !jobForm.controls['subject'].valid">
+                                <span class="help-block" style="color:red"
+                                 *ngIf="submitted && jobForm.controls['subject'].hasError('required')">
+                                 subject is required.</span>
+                              </div>
                             </div>
 							  <div class="form-group col-md-12 mb-1">
-                              <input type="file" class="form-control pt-2">
+                              <input (change)='uploadFile($event)'
+                              name='filename'  type="file" class="form-control pt-2">
+                             
                             </div>
                           </div>
                           <div class="form-group mb-1">
                             <textarea class="form-control" id="exampleFormControlTextarea1"
-                            name="message" rows="3" placeholder="Message"></textarea>
-                          </div>
+                            name="message" formControlName='message' rows="3" required placeholder="Message"></textarea>
+                            <div *ngIf="submitted && !jobForm.controls['message'].valid">
+                                <span class="help-block" style="color:red"
+                                 *ngIf="submitted && jobForm.controls['message'].hasError('required')">
+                                 message is required.</span>
+                              </div>
+                        </div>
                           
                           
-                          <button type="submit" (click)="applyforjob()" class="btn btn-request btn-block">Apply for this Job</button>
+                          <button  (click)="applyforjob()" id='applyjob' class="btn btn-request btn-block">Apply for this Job</button>
                         </form>
 						</div>
                     </div>
