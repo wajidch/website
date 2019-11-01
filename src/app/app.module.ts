@@ -25,6 +25,8 @@ import { SeoServiceComponent } from './pages/service-pages/seo-service/seo-servi
 import { UxuiServiceComponent } from './pages/service-pages/uxui-service/uxui-service.component';
 import { ContentServiceComponent } from './pages/service-pages/content-service/content-service.component';
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { CareerComponent } from './pages/career/career.component';
+import { CareerDetailComponent } from './pages/career-detail/career-detail.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     SeoServiceComponent,
     UxuiServiceComponent,
     ContentServiceComponent,
+    CareerComponent,
+    CareerDetailComponent,
   
   
     

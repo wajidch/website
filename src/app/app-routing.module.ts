@@ -9,6 +9,8 @@ import { ContactComponent } from './pages/contact-pages/contact/contact.componen
 import { SeoServiceComponent } from './pages/service-pages/seo-service/seo-service.component';
 import { UxuiServiceComponent } from './pages/service-pages/uxui-service/uxui-service.component';
 import { ContentServiceComponent } from './pages/service-pages/content-service/content-service.component';
+import { CareerComponent } from './pages/career/career.component';
+import { CareerDetailComponent } from './pages/career-detail/career-detail.component';
 
 
 const routes: Routes = [
@@ -21,6 +23,9 @@ const routes: Routes = [
       { path:'contact',component:ContactComponent,data: {title: 'Contact Us | Appflox'}},
       { path:'seoservice',component:SeoServiceComponent,data: {title: 'SEO | Appflox'}},
       { path:'uxuiservice',component:UxuiServiceComponent,data: {title: 'UI/UX | Appflox'}},
+      { path:'career',component:CareerComponent,data: {title: 'Career | Appflox'}},
+      { path:'careerdetail',component:CareerDetailComponent,data: {title: 'Career Detail | Appflox'}},
+
       { path:'contentservice',component:ContentServiceComponent,data: {title: 'Content Writing | Appflox'}},
   
       {path:'**',redirectTo:'',pathMatch:'full',data: {title: 'Home | Appflox'}}

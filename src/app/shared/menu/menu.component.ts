@@ -166,13 +166,17 @@ siteKey=environment.siteKey;
     $("#work").removeClass('active');
     $("#blog").removeClass('active');
     $("#contact").removeClass('active');
+    $("#career").removeClass('active');
+
   }
+  
   about(){
     $("#home").removeClass('active');
     $("#about").addClass('active');
     $("#service").removeClass('active');
     $("#work").removeClass('active');
     $("#blog").removeClass('active');
+    $("#career").removeClass('active');
     $("#contact").removeClass('active');
   }
   service(){
@@ -181,6 +185,7 @@ siteKey=environment.siteKey;
     $("#service").addClass('active');
     $("#work").removeClass('active');
     $("#blog").removeClass('active');
+    $("#career").removeClass('active');
     $("#contact").removeClass('active');
   }
   work(){
@@ -189,6 +194,7 @@ siteKey=environment.siteKey;
     $("#service").removeClass('active');
     $("#work").addClass('active');
     $("#blog").removeClass('active');
+    $("#career").removeClass('active');
     $("#contact").removeClass('active');
   }
   blog(){
@@ -197,6 +203,7 @@ siteKey=environment.siteKey;
     $("#service").removeClass('active');
     $("#work").removeClass('active');
     $("#blog").addClass('active');
+    $("#career").removeClass('active');
     $("#contact").removeClass('active');
   }
   contact(){
@@ -206,6 +213,16 @@ siteKey=environment.siteKey;
     $("#work").removeClass('active');
     $("#blog").removeClass('active');
     $("#contact").addClass('active');
+    $("#career").removeClass('active');
+  }
+  career(){
+    $("#home").removeClass('active');
+    $("#about").removeClass('active');
+    $("#service").removeClass('active');
+    $("#work").removeClass('active');
+    $("#blog").removeClass('active');
+    $("#contact").removeClass('active');
+    $("#career").addClass('active');
   }
 
 }
