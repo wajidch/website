@@ -40,7 +40,7 @@ export class FooterComponent implements OnInit {
       this.submitted=false;
     
     this.loadingBar.start();
-    this.apiservice.post('subscribe',val)
+    this.apiservice.post('api/subscribe',val)
       .pipe(
         catchError(err => {
           console.log('Handling error locally and rethrowing it...', err);

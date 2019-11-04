@@ -1,4 +1,6 @@
 
+<ngx-loading-bar></ngx-loading-bar>
+
 <header class="career-header">
 	
     <div class="container">
@@ -23,21 +25,21 @@
 			<div class="row">
                 <div class="col-lg-8 col-md-7">
                     <div class="job-detail job-single border rounded p-4">
-                        <h4 class=""><a href="#" class="text-dark">Web Designer</a></h4>
+                        <h4 class=""><a href="#" class="text-dark">{{detailist?.title}}</a></h4>
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item mr-3">
                                 <p class="text-muted mb-2"><i class="far fa-building mr-1"></i>Appflox</p>
                             </li>
 
                             <li class="list-inline-item">
-                                <p class="text-muted mb-2"><i class="fas fa-map-marker-alt mr-1"></i>Jim Rosa Lane San Francisco</p>
+                                <p class="text-muted mb-2"><i class="fas fa-map-marker-alt mr-1"></i>{{detailist?.address}}</p>
                             </li>
 
                             <li class="list-inline-item">
-                                <p class="text-muted mb-2"><i class="fas fa-dollar-sign mr-1"></i>$850 - $1000/month</p>
+                                <p class="text-muted mb-2"><small>PKR</small> {{detailist?.sallary}}/month</p>
                             </li>
                         </ul>
-                        <p class="text-muted mb-0">Suspendisse pulvinar augue ac venenatis condimentum at sem libero volutpat nibh that nec pellentesque velit pede quis nunc Fusce a quam etiam ut purus mattis mauris sodales aliquam curabitur site Quisque placerat namipsum risus rutrum vitaeeumolestie vel lacus sed augue</p>
+                        <p class="text-muted mb-0">{{detailist?.short_des}}</p>
                     </div>
 
                     <div class="row">
@@ -50,9 +52,9 @@
                         <div class="col-lg-12">
                             <div class="job-detail border rounded mt-2 p-4">
                                 <div class="job-detail-desc">
-                                    <p class="text-muted mb-3">Aenean vulputate eleifend tellus aenean leo ligula porttitor consequat vitae eleifend ac enim liquam lorem ante, dapibus in, viverra quis feugiat a tellu hasellus viverra nulla ut metus varius laoreet uisque rutrum enean imperdiet tiam ultricies nisi vel augue urabitur ullamcorper ultricies nisi am eget dui tiam rhoncus aecenas tempus tellus eget condimentum rhoncus sem quam semper libero amet adipiscing sem neque sed ipsum am quam nunc blandit luctus pulvinar hendrerit idlorem Maecenas nec odio et ante tincidunt tempus. Nullam quis ante. </p>
+                                    <p class="text-muted mb-3">{{detailist?.long_des}}  </p>
 
-                                    <p class="text-muted mb-0">Nam quam nunc blandit vel luctus pulvinar hendrerit id lorem Maecenas nec odio et ante tincidunt tempus donec vitae sapien ut libero venenatis faucibus ullam quis ante tiam sit amet orci eget eros faucibus tincidunt ed fringilla mauris sit amet nibh Donec sodales sagittis magna ed consequat leo eget bibendum sodales augue velit cursus nunc quis gravida magna mi libero usce vulputate eleifend sapien estibulum purus qua scelerisque ut mollis sed nonummy id metus ullam accumsan lorem Vivamus elementum semper enean vulputate eleifend tellus enean leo ligula porttitor eu consequat vitae eleifend ac enim liquam lorem ante dapibus viverra quis feugiat tellus hasellus viverra nulla ut metus varius laoreet uisque rutrum Aenean imperdiet in dui</p>
+                                  
                                 </div>
 
                             </div>
@@ -70,18 +72,8 @@
                             <div class="job-detail job-detail-list border rounded mt-2 p-4">
                                 <div class="job-detail-desc">
                                     <ul>
-										<li>Morbi mattis ullamcorper velit hasellus gravida semper nisi nullam vel sem.</li>
-										<li>Phasellus viverra nulla ut metus varius laoreet uisque rutrum enean imperdiet.</li>
-										<li>Etiam ultricies nisi vel augue Curabitur ullamcorper ultricies nisi am eget dui tiam rhoncus.</li>
-										<li>Donec mollis hendrerit risus hasellus nec sem in justo pellentesque facilisis.</li>
-										<li>Praesent congue erat at massa Sed cursus turpis vitae tortor onec posuere vulputate arcu.</li>
-										<li>Donec elit libero, sodales nec volutpat a suscipit non turpis ullam sagittis.</li>
-										<li>Morbi mattis ullamcorper velit hasellus gravida semper nisi nullam vel sem.</li>
-										<li>Phasellus viverra nulla ut metus varius laoreet uisque rutrum enean imperdiet.</li>
-										<li>Etiam ultricies nisi vel augue Curabitur ullamcorper ultricies nisi am eget dui tiam rhoncus.</li>
-										<li>Donec mollis hendrerit risus hasellus nec sem in justo pellentesque facilisis.</li>
-										<li>Praesent congue erat at massa Sed cursus turpis vitae tortor onec posuere vulputate arcu.</li>
-										<li>Donec elit libero, sodales nec volutpat a suscipit non turpis ullam sagittis.</li>
+										<li>{{detailist?.education}}</li>
+									
 									</ul>
 
                                 </div>
@@ -99,17 +91,12 @@
                         <div class="col-lg-12">
                             <div class="job-detail job-detail-list border rounded mt-2 p-4">
                                 <div class="job-detail-desc">
-                                    <p class="text-muted mb-3">Aenean vulputate eleifend tellus aenean leo ligula porttitor consequat at vitae eleifend ac enim liquam lorem ante, dapibus in, viverra quis feugiat a tellu hasellus viverra nulla ut metus varius laoreet uisque rutrum enean imperdiet tiam ultricies nisi vel augue urabitur ullamcorper ultricies nisi am eget dui tiam rhoncus aecenas tempus tellus eget condimentum rhoncus sem quam semper libero amet Nullam quis ante. </p>
+                            
                                     
 								
 									<ul>
-										<li>Morbi mattis ullamcorper velit hasellus gravida semper nisi nullam vel sem.</li>
-										<li>Phasellus viverra nulla ut metus varius laoreet uisque rutrum enean imperdiet.</li>
-										<li>Etiam ultricies nisi vel augue Curabitur ullamcorper ultricies nisi am eget dui tiam rhoncus.</li>
-										<li>Donec mollis hendrerit risus hasellus nec sem in justo pellentesque facilisis.</li>
-										<li>Praesent congue erat at massa Sed cursus turpis vitae tortor onec posuere vulputate arcu.</li>
-										<li>Donec elit libero, sodales nec volutpat a suscipit non turpis ullam sagittis.</li>
-										<li>Morbi mattis ullamcorper velit hasellus gravida semper nisi nullam vel sem.</li>
+										<li>{{detailist?.responsibility}}</li>
+										
 									</ul>
 									
                                 </div>
@@ -117,40 +104,9 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h5 class="text-dark mt-4">How To Apply :</h5>
-                        </div>
-                    </div>
+                  
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="job-detail border rounded mt-2 p-4">
-                                <div class="job-detail-desc">
-                                    <div class="job-details-desc-item">
-                                        <div class="float-left mr-3">
-                                            <p class="text-muted mb-0">1 )</p>
-                                        </div>
-                                        <p class="text-muted mb-3 overflow-hidden d-block">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae In ac dui quis mi consectetuer lacinia ed aliquam ultrices mauris nteger ante arcu accumsan consectetuer thet a eget posuere ut mauris raesent adipiscing Sed lectus Donec mollis hendrerit risus hasellue.</p>
-                                    </div>
-
-                                    <div class="job-details-desc-item">
-                                        <div class="float-left mr-3">
-                                            <p class="text-muted mb-0">2 )</p>
-                                        </div>
-                                        <p class="text-muted mb-3 overflow-hidden d-block">In enim justo rhoncus ut imperdiet a venenatis vitae justo ullam dictum felis eu pede mollis pretium nteger tincidunt enean imperdiet tiam ultricies nisi vel augue urabitur ullamcorper ultricies nisi am eget Etiam rhoncus ras dapibus ivamus elementum semper nisi.</p>
-                                    </div>
-
-                                    <div class="job-details-desc-item">
-                                        <div class="float-left mr-3">
-                                            <p class="text-muted mb-0">3 )</p>
-                                        </div>
-                                        <p class="text-muted mb-0 overflow-hidden d-block">Maecenas nec odio et ante tincidunt tempus onec vitae sapien ut libero venenatis faucibus ullam quis ante tiam sit Vestibulum purus quam scelerisque ut mollis sed nonummy id metus ullam accumsan lorem in dui ras ultricies mi eu turpis hendrerit fringilla amet orci eget eros.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  
                 </div>
 
                 <div class="col-lg-4 col-md-5 mt-4 mt-sm-0 pt-2 pt-sm-0">
@@ -158,15 +114,15 @@
 					<div class="job-detail rounded border p-4 mb-4">
 						<div class="contact-section form-job" style="background: none;">
 							<h5 class="text-dark mb-2">Apply for Job</h5>
-                       		<form [formGroup]='jobForm'>
+                       		<form [formGroup]='jobForm' id='applyjobform'>
                           <div class="form-row">
                             <div class="form-group col-md-12 mb-1">
-                              <input type="text" class="form-control" id=""  name="fullname"
-                              formControlName='fullname'
+                              <input type="text" class="form-control" id=""  name="name"
+                              formControlName='name'
                                placeholder="Full Name" required='required'>
-                               <div *ngIf="submitted && !jobForm.controls['fullname'].valid">
+                               <div *ngIf="submitted && !jobForm.controls['name'].valid">
                                 <span class="help-block" style="color:red"
-                                 *ngIf="submitted && jobForm.controls['fullname'].hasError('required')">
+                                 *ngIf="submitted && jobForm.controls['name'].hasError('required')">
                                  Full Name is required.</span>
                               </div>
                             </div>
@@ -214,9 +170,19 @@
                                  message is required.</span>
                               </div>
                         </div>
+                        <ngx-invisible-recaptcha #captchaElem
+                        [siteKey]="siteKey"
+                        (reset)="handleReset()"
+                        (ready)="handleReady()"
+                        (load)="handleLoad()"
+                        (success)="handleSuccess($event)"
+                        [useGlobalDomain]="false"
+                     
+                        [ngModel]="recaptcha"
+                        [ngModelOptions]="{ standalone: true }">
+                      </ngx-invisible-recaptcha>
                           
-                          
-                          <button  (click)="applyforjob()" id='applyjob' class="btn btn-request btn-block">Apply for this Job</button>
+                          <button  (click)="applyforjob(jobForm.value)" id='applyjob' class="btn btn-request btn-block">Apply for this Job</button>
                         </form>
 						</div>
                     </div>
@@ -228,17 +194,17 @@
                             </div>
                             <div class="overview-details">
                                 <h6 class="text-muted mb-0 font-weight-bold">Experience</h6>
-                                <h6 class="text-black-50 pt-2 mb-0">1 To 3 Years Exp.</h6>
+                                <h6 class="text-black-50 pt-2 mb-0">{{detailist?.experience}} Years Exp.</h6>
                             </div>
                         </div>
 
                         <div class="single-post-item mb-4">
                             <div class="float-left mr-3 w-10">
-                                <i class="fas fa-dollar-sign text-muted fa-1x"></i>
+                                <small><b>PKR</b></small>
                             </div>
                             <div class="overview-details">
                                 <h6 class="text-muted mb-0 font-weight-bold">Salary</h6>
-                                <h6 class="text-black-50 pt-2 mb-0">$700 - $1200/month</h6>
+                                <h6 class="text-black-50 pt-2 mb-0">{{detailist?.sallary}}/month</h6>
                             </div>
                         </div>
 
@@ -248,7 +214,7 @@
                             </div>
                             <div class="overview-details">
                                 <h6 class="text-muted mb-0 font-weight-bold">Category</h6>
-                                <h6 class="text-black-50 pt-2 mb-0">Developer</h6>
+                                <h6 class="text-black-50 pt-2 mb-0">{{detailist?.category}}</h6>
                             </div>
                         </div>
 
@@ -258,7 +224,7 @@
                             </div>
                             <div class="overview-details">
                                 <h6 class="text-muted mb-0 font-weight-bold">Date Posted</h6>
-                                <h6 class="text-black-50 pt-2 mb-0">30/08/2018</h6>
+                                <h6 class="text-black-50 pt-2 mb-0">{{detailist?.created_at | date:'dd/MM/yyy'}}</h6>
                             </div>
                         </div>
 
@@ -285,7 +251,8 @@
 
                     <h5 class="text-dark">Job Location</h5>
                     <div class="map">
-                        <iframe width="100%" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6030.418742494061!2d-111.34563870463673!3d26.01036670629853!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1471908546569" class="rounded" style="border: 0" allowfullscreen=""></iframe>
+
+                        <iframe width="100%" src="https://maps.google.com/maps?width=100%&height=600&hl=en&coord=33.6995877,72.9745551&q=Office%20E-501%2C%20Ittefaq%20Heights%20E-11%2F2%20Islamabad%2C%20Pakistan+(Appflox)&ie=UTF8&t=&z=14&iwloc=B&output=embed" class="rounded" style="border: 0" allowfullscreen=""></iframe>
                     </div>
 
                     <div class="job-details-desc-item mt-2">
@@ -297,10 +264,9 @@
 
                     <ul class="social-icon list-inline mb-0 mt-4">
                         <li class="list-item mb-2">Share :</li>
-                        <li class="list-inline-item"><a href="#" class=" rounded"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class=" rounded"><i class="fab fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class=" rounded"><i class="fab fa-google-plus-g"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class=" rounded"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="list-inline-item"><a target="_blank" href="https://www.facebook.com/appflox/" class=" rounded"><i class="fab fa-facebook-f"></i></a></li>
+                       
+                        <li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/company/appflox" class=" rounded"><i class="fab fa-linkedin-in"></i></a></li>
                     </ul>                    
 
                     

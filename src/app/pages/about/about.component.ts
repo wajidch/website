@@ -53,7 +53,7 @@ export class AboutComponent implements OnInit {
       this.submitted=false;
     
     this.loadingBar.start();
-    this.apiservice.post('quote', val)
+    this.apiservice.post('api/quote', val)
       .pipe(
         catchError(err => {
           console.log('Handling error locally and rethrowing it...', err);
