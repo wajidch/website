@@ -9,6 +9,7 @@ import { LoadingBarService } from '@ngx-loading-bar/core';
 declare var jquery: any;
 declare var $: any;
 import Swal from 'sweetalert2'
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-career-detail',
@@ -17,7 +18,7 @@ import Swal from 'sweetalert2'
 })
 export class CareerDetailComponent implements OnInit {
 
-  jobid= localStorage.getItem("jobid");
+  jobid;
   detailist: any;
   file: any;
   jobForm: any;
@@ -31,7 +32,14 @@ export class CareerDetailComponent implements OnInit {
   @ViewChild('captchaElem', { static: false }) captchaElem: InvisibleReCaptchaComponent;
 siteKey=environment.siteKey;
   constructor(private apiservice:apiService, private cdr: ChangeDetectorRef,
-    private loadingBar:LoadingBarService) { }
+    private loadingBar:LoadingBarService,
+    private activatedRoute: ActivatedRoute) { 
+      this.activatedRoute.queryParams.subscribe(params => {
+          
+        this.jobid = params['id'];
+        localStorage.setItem("jobid",this.jobid);
+      })
+    }
 applyJobObj={
   fullname:'',
   email:'',
@@ -179,6 +187,11 @@ applyJobObj={
     this.apiservice.get(`career/${this.jobid}`).subscribe((list:any)=>{
       this.loadingBar.start();
       this.detailist=list.body.data
+     
+      $("#appendResponsibilitiesHTML").append(this.detailist.responsibility);
+      $("#appendeducationHTML").append(this.detailist.education);
+      $("#appendDecHTML").append(this.detailist.long_des);
+
       this.loadingBar.complete();
  
     })

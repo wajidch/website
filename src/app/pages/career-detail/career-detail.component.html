@@ -32,11 +32,11 @@
                             </li>
 
                             <li class="list-inline-item">
-                                <p class="text-muted mb-2"><i class="fas fa-map-marker-alt mr-1"></i>{{detailist?.address}}</p>
+                                <p class="text-muted mb-2"><i class="fas fa-map-marker-alt mr-1"></i>{{detailist?.address}} </p>
                             </li>
 
                             <li class="list-inline-item">
-                                <p class="text-muted mb-2"><small>PKR</small> {{detailist?.sallary}}/month</p>
+                                <p class="text-muted mb-2"><small style="font-size: 90%; font-weight: 900;"> PKR</small> {{detailist?.sallary}}/month</p>
                             </li>
                         </ul>
                         <p class="text-muted mb-0">{{detailist?.short_des}}</p>
@@ -51,9 +51,8 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="job-detail border rounded mt-2 p-4">
-                                <div class="job-detail-desc">
-                                    <p class="text-muted mb-3">{{detailist?.long_des}}  </p>
-
+                                <div class="job-detail-desc" id='appendDecHTML'>
+                                   
                                   
                                 </div>
 
@@ -70,11 +69,8 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="job-detail job-detail-list border rounded mt-2 p-4">
-                                <div class="job-detail-desc">
-                                    <ul>
-										<li>{{detailist?.education}}</li>
-									
-									</ul>
+                                <div class="job-detail-desc" id='appendeducationHTML'>
+                                   
 
                                 </div>
                             </div>
@@ -90,14 +86,11 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="job-detail job-detail-list border rounded mt-2 p-4">
-                                <div class="job-detail-desc">
+                                <div class="job-detail-desc" id='appendResponsibilitiesHTML'>
                             
                                     
+                                  
 								
-									<ul>
-										<li>{{detailist?.responsibility}}</li>
-										
-									</ul>
 									
                                 </div>
                             </div>

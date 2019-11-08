@@ -91,7 +91,7 @@ siteKey=environment.siteKey;
   sendRequest(val){
     
     
-    this.captchaElem.execute();
+    //this.captchaElem.execute();
     this.submitted=true;
     //this.spinner.show();
     if(this.QuoteForm.valid){

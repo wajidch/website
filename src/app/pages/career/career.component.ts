@@ -17,7 +17,7 @@ joblist:any;
     current_page: 1
   };
   constructor(private apiservice:apiService,
-    private route:Router, private loadingBar:LoadingBarService,) { }
+    private route:Router, private loadingBar:LoadingBarService) { }
 
   ngOnInit() {
     this.getJobs(1);
@@ -80,6 +80,7 @@ loadPage(page) {
 jobdetail(id){
 
   localStorage.setItem("jobid",id);
-this.route.navigateByUrl("careerdetail")
+  // this.route.navigate(['careerdetail'], { queryParams: { id: id } });
+  this.route.navigateByUrl(`careerdetail?id=${id}`)
 }
 }

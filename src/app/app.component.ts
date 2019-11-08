@@ -6,6 +6,7 @@ import { apiService } from './services/api.service';
 import { LoadingBarService } from '@ngx-loading-bar/core';
 import { authService } from './services/auth.service';
 import { Title } from '@angular/platform-browser';
+import {SitemapGenerator} from 'sitemap-generator'
 
 @Component({
   selector: 'app-root',
@@ -31,6 +32,8 @@ export class AppComponent implements OnInit {
      }
 
   ngOnInit() {
+  
+  
     const appTitle = this.titleService.getTitle();
     this.router
       .events.pipe(
@@ -48,7 +51,7 @@ export class AppComponent implements OnInit {
   
     this.router.events.subscribe((route)=>{
       if(route instanceof NavigationEnd){
-        
+        console.log("S",route.url)
         if(route.url==='/'){
             this.showMainheader=true;
             this.showInnerHeader=false;
@@ -64,6 +67,11 @@ export class AppComponent implements OnInit {
           this.showMainheader=false;
           this.showInnerHeader=true;
           
+        }
+        
+       else if(route.url===`/careerdetail?id=${localStorage.getItem("jobid")}`){
+          this.showMainheader=false;
+          this.showInnerHeader=true;
         }
         else{
           this.showMainheader=true;

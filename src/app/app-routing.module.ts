@@ -28,7 +28,7 @@ const routes: Routes = [
 
       { path:'contentservice',component:ContentServiceComponent,data: {title: 'Content Writing | Appflox'}},
   
-      {path:'**',redirectTo:'',pathMatch:'full',data: {title: 'Home | Appflox'}}
+      // {path:'**',redirectTo:'',pathMatch:'full',data: {title: 'Home | Appflox'}}
       
 ];
 
