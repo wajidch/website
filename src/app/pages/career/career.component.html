@@ -27,7 +27,7 @@
 					
 					<div *ngFor='let list of joblist' class="job-box bg-white overflow-hidden border rounded mt-4 position-relative overflow-hidden">
                                         
-							<div class="p-4">
+							<div class="p-4" style="cursor: pointer;color:#ffff" (click)='jobdetail(list.id)'>
 								<div class="row align-items-center">
 
 									<div class="col-md-3">
