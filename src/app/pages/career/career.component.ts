@@ -80,6 +80,7 @@ loadPage(page) {
 jobdetail(id){
 
   localStorage.setItem("jobid",id);
+  console.log(btoa(id))
   // this.route.navigate(['careerdetail'], { queryParams: { id: id } });
   this.route.navigateByUrl(`careerdetail?id=${id}`)
 }

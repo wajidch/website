@@ -68,7 +68,7 @@ export class AppComponent implements OnInit {
           this.showInnerHeader=true;
           
         }
-        
+       
        else if(route.url===`/careerdetail?id=${localStorage.getItem("jobid")}`){
           this.showMainheader=false;
           this.showInnerHeader=true;
