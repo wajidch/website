@@ -79,8 +79,8 @@ loadPage(page) {
 }
 jobdetail(id){
 
+  localStorage.removeItem('jobid');
   localStorage.setItem("jobid",id);
-  console.log(btoa(id))
   // this.route.navigate(['careerdetail'], { queryParams: { id: id } });
   this.route.navigateByUrl(`careerdetail?id=${id}`)
 }
